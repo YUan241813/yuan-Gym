@@ -1,0 +1,28 @@
+2856 translated strings in src/, 12 defined in no locale pack:
+
+  "Strong, FitNotes, GymMane or Apple Health body weight: import their export here."
+      src\components\Tour.jsx
+  "This device"
+      src\views\Settings.jsx
+  "不上传、不同步，除了 AI 之外不需要联网。"
+      src\views\Settings.jsx
+  "从备份文件恢复全部数据"
+      src\views\Settings.jsx
+  "只存在这台手机上"
+      src\views\Settings.jsx
+  "存成一个文件，之后可以导回来"
+      src\views\Settings.jsx
+  "导入备份"
+      src\views\Settings.jsx
+  "导出备份（JSON）"
+      src\views\Settings.jsx
+  "本机数据"
+      src\views\Settings.jsx
+  "每次改动在 Documents/yuan-Gym 留一份"
+      src\views\Settings.jsx
+  "自动备份到文件夹"
+      src\views\Settings.jsx
+  "这一版没有账号，也不上传任何东西：所有训练记录只在这台设备的存储里。换手机或重装前，先导出一份备份存到文件里。"
+      src\views\Settings.jsx
+
+These render English in all 19 translated languages.

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<title>anatomy shot</title>
+<style>
+  html, body { margin: 0; background: #05070f; color: #cfe4ff; font: 13px system-ui, sans-serif; }
+  .row { display: flex; gap: 16px; padding: 20px; align-items: flex-start; }
+  .cell { position: relative; background: radial-gradient(130% 90% at 50% 2%, #16305c 0%, #0a1224 46%, #04060d 100%); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  .cell canvas { display: block; border-radius: 16px; }
+  .lbl { position: absolute; left: 16px; top: 12px; font-weight: 700; color: #cfe4ff; z-index: 2; letter-spacing: .04em; }
+  .lbl small { display:block; font-weight:500; color:#7fa8d6; font-size:11px; margin-top:2px; }
+</style>
+</head>
+<body>
+<div class="row" id="row"></div>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three'
+import { buildBody, preloadAnatomyModel } from '/src/lib/anatomy/index.js'
+
+await preloadAnatomyModel()
+
+const VIEWS = [
+  { key: 'front', label: '前视图', sub: 'Front', half: 'front', spin: 0 },
+  { key: 'back',  label: '后视图', sub: 'Back',  half: 'back', spin: Math.PI },
+  { key: 'all',   label: '全身',   sub: 'Whole body', half: 'all', spin: 0.5 },
+]
+
+const row = document.getElementById('row')
+const W = 440, H = 720
+
+// ?opaque=1 看皮肤本体，?muscle=1 看纯肌肉，?inflate=1 看训练后体型，默认半透明透视。
+const Q = new URLSearchParams(location.search)
+const OPAQUE = Q.has('opaque')
+const MUSCLE_ONLY = Q.has('muscle')
+const DOUBLE_SIDE = Q.has('double')
+const FLAT = Q.has('flat')       // 诊断：皮肤换成纯洋红无光照材质，非洋红像素即洞/其他物体
+const INFLATE = Q.has('inflate')
+  ? { chest: 1, deltoids: 1, biceps: 1, triceps: 1, quadriceps: 1, gluteal: 1 }
+  : {}
+
+function frame(built, half) {
+  const skinMat = built.materials.skin
+  skinMat.opacity = OPAQUE ? 1 : 0.05 + 0.5 * 0.22
+  skinMat.visible = !MUSCLE_ONLY
+  skinMat.depthWrite = OPAQUE
+  if (DOUBLE_SIDE) skinMat.side = 2   // THREE.DoubleSide，诊断用
+  if (Q.has('front')) skinMat.side = 0   // THREE.FrontSide，诊断用
+  if (FLAT) { skinMat.color.setHex(0xff00ff); skinMat.roughness = 1; skinMat.metalness = 0; skinMat.emissive.setHex(0xff00ff) }
+  // 诊断：真·无光照纯色（看几何有没有洞）/ 法线可视化（看法线是否连续）
+  if (Q.has('basic') || Q.has('normal')) {
+    const m = Q.has('normal')
+      ? new THREE.MeshNormalMaterial({ side: skinMat.side })
+      : new THREE.MeshBasicMaterial({ color: 0xff00ff, side: skinMat.side })
+    built.skin.traverse(o => { if (o.isMesh) o.material = m })
+  }
+  built.skin.visible = !MUSCLE_ONLY
+  built.bones.visible = !OPAQUE
+  // 不透明皮肤下把肌肉压到后面：靠深度缓冲遮挡，避免穿模的肌肉戳出来。
+  if (OPAQUE) built.group.children.forEach(o => {
+    if (o.userData && o.userData.muscle) o.visible = false
+  })
+}
+
+for (const v of VIEWS) {
+  const cell = document.createElement('div')
+  cell.className = 'cell'
+  cell.style.width = W + 'px'
+  cell.style.height = H + 'px'
+  const lbl = document.createElement('div')
+  lbl.className = 'lbl'
+  lbl.innerHTML = v.label + '<small>' + v.sub + '</small>'
+  cell.appendChild(lbl)
+  row.appendChild(cell)
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true })
+  renderer.setPixelRatio(1)
+  renderer.setSize(W, H, false)
+  renderer.domElement.style.width = W + 'px'
+  renderer.domElement.style.height = H + 'px'
+  cell.appendChild(renderer.domElement)
+
+  const scene = new THREE.Scene()
+  scene.fog = new THREE.FogExp2(0x05070f, 0.04)
+  const camera = new THREE.PerspectiveCamera(30, W / H, 0.05, 20)
+  camera.position.set(0, 0.95, 3.7)
+  camera.lookAt(0, 0.96, 0)
+  camera.updateProjectionMatrix()
+
+  scene.add(new THREE.HemisphereLight(0xcfe2ff, 0x141b2c, 1.8))
+  const key = new THREE.DirectionalLight(0xffffff, 3.6)
+  key.position.set(2.4, 3.4, 2.8)
+  scene.add(key)
+  const rim = new THREE.DirectionalLight(0x6fb4ff, 2.6)
+  rim.position.set(-2.6, 1.8, -2.4)
+  scene.add(rim)
+  const under = new THREE.PointLight(0x3f86ff, 16, 8, 2)
+  under.position.set(0, -0.4, 1.4)
+  scene.add(under)
+
+  const built = buildBody({ profile: {}, gender: 'male', half: v.half, levels: INFLATE })
+  built.group.rotation.y = v.spin
+  scene.add(built.group)
+  frame(built, v.half)
+
+  const render = () => { renderer.render(scene, camera) }
+  render()
+  requestAnimationFrame(() => { render(); requestAnimationFrame(() => { render(); }) })
+}
+window.__anatomyReady = true
+</script>
+</body>
+</html>

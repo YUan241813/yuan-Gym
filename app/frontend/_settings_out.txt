@@ -1,0 +1,546 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90mD:/Self-developedSoftware/yuan-Gym/app/frontend[39m
+
+[90mstderr[2m | src/views/Settings.connstatus.test.jsx[2m > [22m[2mShow connection status[2m > [22m[2mis there with no account, on a phone kept local, and on by default
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/views/Settings.connstatus.test.jsx[2m > [22m[2mShow connection status[2m > [22m[2mis there with no account, on a phone kept local, and on by default
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/views/Settings.push.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+[90mstderr[2m | src/views/Settings.app-icon.test.jsx[2m > [22m[2mApp icon row in Look & Home[2m > [22m[2mis there in the phone app (android)
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/views/Settings.vibrate-silent.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 125[2mms[22m[39m
+ [32m✓[39m src/views/Settings.speed.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 127[2mms[22m[39m
+ [32m✓[39m src/views/Settings.logref.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 130[2mms[22m[39m
+ [32m✓[39m src/views/Settings.gifsize.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 135[2mms[22m[39m
+ [32m✓[39m src/views/Settings.tour.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 143[2mms[22m[39m
+ [32m✓[39m src/views/Settings.reset.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 149[2mms[22m[39m
+ [32m✓[39m src/views/Settings.workoutview.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 162[2mms[22m[39m
+ [32m✓[39m src/views/Settings.warmup-bars.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 172[2mms[22m[39m
+ [32m✓[39m src/views/Settings.volume-warmups.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 174[2mms[22m[39m
+ [32m✓[39m src/views/Settings.backupfolder.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 176[2mms[22m[39m
+[90mstderr[2m | src/views/Settings.app-icon.test.jsx[2m > [22m[2mSeasonal themes: the Halloween icon shortcut[2m > [22m[2mshows on the phone while Halloween is on and opens the picker (android)
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/views/Settings.schedule.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[32m 190[2mms[22m[39m
+ [32m✓[39m src/views/Settings.startfrom.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 206[2mms[22m[39m
+ [32m✓[39m src/views/Settings.themes.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 218[2mms[22m[39m
+ [32m✓[39m src/views/Settings.app-icon.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[32m 231[2mms[22m[39m
+[90mstderr[2m | src/views/settings-pages.test.jsx[2m > [22m[2mthe root[2m > [22m[2ma row opens its page; the Coach row opens 小G; the card opens Account
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/views/settings-pages.test.jsx[2m > [22m[2mthe root[2m > [22m[2ma row opens its page; the Coach row opens 小G; the card opens Account
+[22m[39mAn update to Settings inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [31m❯[39m src/views/Settings.connstatus.test.jsx [2m([22m[2m6 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 242[2mms[22m[39m
+     [32m✓[39m is there with no account, on a phone kept local, and on by default[32m 89[2mms[22m[39m
+     [32m✓[39m switches the profile setting off and on[32m 42[2mms[22m[39m
+     [32m✓[39m switching it on brings back the no-server line its × hid[32m 29[2mms[22m[39m
+     [32m✓[39m Look & Home does not promise a guest that anything syncs with a profile[32m 49[2mms[22m[39m
+[31m     [31m×[31m Account says guest mode once: the banner says it, the footer only when the banner is off[39m[32m 25[2mms[22m[39m
+[31m     [31m×[31m Account says guest mode in the footer once the banner's × hid it (#454)[39m[32m 5[2mms[22m[39m
+ [32m✓[39m src/views/Settings.nudge.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[32m 278[2mms[22m[39m
+ [32m✓[39m src/views/Settings.sound.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[32m 280[2mms[22m[39m
+ [31m❯[39m src/views/Settings.update.test.jsx [2m([22m[2m12 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 298[2mms[22m[39m
+     [32m✓[39m web build: never asks for releases; the Updates section points at the APK instead[32m 62[2mms[22m[39m
+     [32m✓[39m mobile build on iOS: no check, no row, no section[32m 26[2mms[22m[39m
+     [32m✓[39m Google Play build: Play installs the updates, so no check and no row[32m 20[2mms[22m[39m
+     [32m✓[39m mobile build on Android: checks once and shows the row, tapping it asks before downloading[32m 27[2mms[22m[39m
+     [32m✓[39m Android without a newer release: a "Check for updates" row stays, and tapping it checks again[32m 32[2mms[22m[39m
+     [32m✓[39m Android when gitlab.com is unreachable: stays quiet, keeps the row[32m 17[2mms[22m[39m
+     [32m✓[39m Android: a downloaded APK left in the cache is deleted once nothing newer is out, and kept while one is[32m 33[2mms[22m[39m
+     [32m✓[39m the sideloaded APK names its kind and the animation size built in[32m 11[2mms[22m[39m
+     [32m✓[39m not on the web, iOS or the Google Play build[32m 30[2mms[22m[39m
+[31m     [31m×[31m the APK keeps the donation links and has no Play rating row[39m[32m 16[2mms[22m[39m
+[31m     [31m×[31m the Google Play build shows only the rating row[39m[32m 11[2mms[22m[39m
+[31m     [31m×[31m the web keeps the donation links[39m[32m 8[2mms[22m[39m
+ [31m❯[39m src/views/Settings.accent.test.jsx [2m([22m[2m10 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 303[2mms[22m[39m
+     [32m✓[39m starts as a rainbow swatch that opens the colour picker[32m 76[2mms[22m[39m
+     [32m✓[39m picking a colour makes it the accent, and the row says so[32m 55[2mms[22m[39m
+     [32m✓[39m dragging only repaints; the colour is saved once, when the picker lets go[32m 43[2mms[22m[39m
+     [32m✓[39m saves after the picker rests, for a browser that sends no change[32m 23[2mms[22m[39m
+     [32m✓[39m a colour still being dragged is saved when Settings closes[32m 15[2mms[22m[39m
+     [32m✓[39m a preset in between keeps the colour, and one tap brings it back[32m 32[2mms[22m[39m
+     [32m✓[39m says when the colour is drawn lighter in dark mode[32m 23[2mms[22m[39m
+     [32m✓[39m says so when a grey is drawn darker in light mode[32m 13[2mms[22m[39m
+[31m     [31m×[31m ignores a value that is not a colour[39m[32m 18[2mms[22m[39m
+     [32m✓[39m the settings search finds it[32m 4[2mms[22m[39m
+[90mstderr[2m | src/views/settings-pages.test.jsx[2m > [22m[2mthe search lands on a row[2m > [22m[2mguest in a browser
+[22m[39mIn HTML, <button> cannot be a descendant of <button>.
+This will cause a hydration error.
+
+  <Settings page="equipment" find={null} via={null}>
+    <div className="narrow" ref={{...}}>
+      <div>
+      <EquipmentCard S={{unit:"kg", ...}} update={function update}>
+        <Section>
+        <Section title="Equipment ..." footer="Filters th...">
+          <section className={"sect "} data-tour={undefined}>
+            <h2>
+            <div className="sect-b">
+              <Row>
+              <Row>
+              <Row>
+              <Row>
+              <Row icon="house" iconTint="var(--teal)" title="Home" subtitle="0 equipmen..." accessory="chevron" ...>
+>               <button className={"lrow tap "} onClick={function onClick} data-tour={undefined}>
+                  <span>
+                  <span>
+>                 <button className="iconbtn" aria-label="Delete" onClick={function onClick}>
+                  ...
+              ...
+            ...
+
+<button> cannot contain a nested <button>.
+See this log for the ancestor stack trace.
+
+ [31m❯[39m src/views/settings-pages.test.jsx [2m([22m[2m36 tests[22m[2m | [22m[31m7 failed[39m[2m)[22m[33m 1094[2mms[22m[39m
+     [32m✓[39m is an account card and one row per page, in the four groups, with value previews[32m 98[2mms[22m[39m
+[31m     [31m×[31m marks the page rows so a long preview wraps instead of losing its second half[39m[32m 40[2mms[22m[39m
+     [32m✓[39m previews a rest that was never on the old list, and no timer at all[32m 41[2mms[22m[39m
+[31m     [31m×[31m signed in, Reminders is there and the card names the account; on the phone app the Coach too[39m[32m 28[2mms[22m[39m
+     [32m✓[39m a row opens its page; the Coach row opens 小G; the card opens Account[32m 28[2mms[22m[39m
+     [32m✓[39m in a hosted app, an admin gets the Coach row too, straight to the Coach card of the admin dashboard[32m 17[2mms[22m[39m
+     [32m✓[39m only while the server offers the Coach, so the row never leads to an admin page without it (#683)[32m 28[2mms[22m[39m
+     [32m✓[39m searches every setting and a hit goes to its page with the row to flash[32m 19[2mms[22m[39m
+     [32m✓[39m guest in a browser[32m 89[2mms[22m[39m
+[31m     [31m×[31m signed in, browser without push[39m[32m 69[2mms[22m[39m
+[31m     [31m×[31m phone, reminder off[39m[32m 64[2mms[22m[39m
+[31m     [31m×[31m phone, reminder and nudge on[39m[32m 65[2mms[22m[39m
+[31m     [31m×[31m phone paired with a server[39m[32m 60[2mms[22m[39m
+     [32m✓[39m finds the rows that used to be missing[32m 4[2mms[22m[39m
+     [32m✓[39m never offers a page this device does not have, even under a parent it has[32m 1[2mms[22m[39m
+     [32m✓[39m a web reminder row waits for push to answer, and flashes Push notifications when it stays off[32m 10[2mms[22m[39m
+     [32m✓[39m comes back with Back to the same entry, and is gone when Settings is opened afresh[32m 15[2mms[22m[39m
+     [32m✓[39m each search entry is a row on its page (guest in a browser)[32m 43[2mms[22m[39m
+     [32m✓[39m every old row has a home: the Workout page holds the warm-ups, rest, logging and the before/during rows[32m 8[2mms[22m[39m
+     [32m✓[39m Default progression shows linear on an older profile and writes S.progDefault[32m 8[2mms[22m[39m
+     [32m✓[39m Collapse completed exercises is saved for every session and drops a running session's own choice[32m 5[2mms[22m[39m
+     [32m✓[39m the Fine-tuning switches write S.wc as the old Workout controls sheet did[32m 4[2mms[22m[39m
+     [32m✓[39m a sub-page names where back goes; Fine-tuning goes back to Workout[32m 8[2mms[22m[39m
+     [32m✓[39m a search hit flashes its row[32m 2[2mms[22m[39m
+     [32m✓[39m Rest timer opens the wheel and stores any value as seconds in restSec[32m 19[2mms[22m[39m
+     [32m✓[39m 0:00 is the timer off[32m 5[2mms[22m[39m
+     [32m✓[39m Rest-pause rest uses the wheel too, 5 s to 5 minutes[32m 12[2mms[22m[39m
+     [32m✓[39m matches titles, synonyms and pages, ignoring case and accents[32m 2[2mms[22m[39m
+     [32m✓[39m pages are hits too, and a title starting with the query comes first[32m 1[2mms[22m[39m
+     [32m✓[39m names Fine-tuning under Workout, and keeps to the rows this device shows[32m 2[2mms[22m[39m
+     [32m✓[39m searches in the app language as well[32m 1[2mms[22m[39m
+     [32m✓[39m finds the translated choices of a row, and words of its own language[32m 279[2mms[22m[39m
+     [32m✓[39m English words match from the start of a word only, so "ton" never finds "buttons"[32m 2[2mms[22m[39m
+[31m     [31m×[31m every page and searchable row title has a word in each pack[39m[32m 3[2mms[22m[39m
+     [32m✓[39m the root groups only name real pages[32m 1[2mms[22m[39m
+     [32m✓[39m shows the active gym first and switching it loads that gym’s plates, with a toast[32m 10[2mms[22m[39m
+ [32m✓[39m src/views/Settings.media.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1459[2mms[22m[39m
+     [33m[2m✓[22m[39m Reset: no sweep before the empty state is on the server, nor for a guest [33m 374[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 13 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe root[2m > [22mmarks the page rows so a long preview wraps instead of losing its second half
+[31m[1mError[22m: ENOENT: no such file or directory, open 'd:\智能体\2026-11-09-20-51-02\src\index.css'[39m
+[36m [2m❯[22m src/views/settings-pages.test.jsx:[2m113:17[22m[39m
+    [90m111|[39m     for (const r of rows) expect(r.classList.contains('sp-root-row')).…
+    [90m112|[39m     // index.css: the marked rows' value may wrap, and never shrinks b…
+    [90m113|[39m     const css = readFileSync(resolve(process.cwd(), 'src/index.css'), …
+    [90m   |[39m                 [31m^[39m
+    [90m114|[39m     const rule = css.match(/^\.lrow\.sp-root-row \.lrow-v\{([^}]*)\}/m…
+    [90m115|[39m     [34mexpect[39m(rule)[33m.[39m[34mtoMatch[39m([36m/white-space:normal/[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe root[2m > [22msigned in, Reminders is there and the card names the account; on the phone app the Coach too
+[31m[1mAssertionError[22m: expected 'This device' to be 'Dana' // Object.is equality[39m
+
+Expected: [32m"Dana"[39m
+Received: [31m"This device"[39m
+
+[36m [2m❯[22m src/views/settings-pages.test.jsx:[2m142:64[22m[39m
+    [90m140|[39m     [34mexpect[39m([34mtitles[39m())[33m.[39m[34mtoContain[39m([32m'Reminders'[39m)
+    [90m141|[39m     [34mexpect[39m([34mtitles[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([32m'AI Coach'[39m)
+    [90m142|[39m     expect(host.querySelector('.sp-acct .lrow-t').textContent).toBe('D…
+    [90m   |[39m                                                                [31m^[39m
+    [90m143|[39m     [34mexpect[39m(host[33m.[39m[34mquerySelector[39m([32m'.sp-avatar'[39m)[33m.[39mtextContent)[33m.[39m[34mtoBe[39m([32m'D'[39m)
+    [90m144|[39m     mocks[33m.[39muser [33m=[39m [35mnull[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe search lands on a row[2m > [22msigned in, browser without push
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe search lands on a row[2m > [22mphone paired with a server
+[31m[1mAssertionError[22m: account: Sync now: expected [ '只存在这台手机上', '导出备份（JSON）', '导入备份' ] to include 'Sync now'[39m
+[36m [2m❯[22m src/views/settings-pages.test.jsx:[2m229:67[22m[39m
+    [90m227|[39m       await act(async () => {})   // the passkey list, asked of the se…
+    [90m228|[39m       const have = [...titles(), ...[...host.querySelectorAll('.btn')]…
+    [90m229|[39m       for (const title of want) expect(have, `${page}: ${title}`).toCo…
+    [90m   |[39m                                                                   [31m^[39m
+    [90m230|[39m     }
+    [90m231|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe search lands on a row[2m > [22mphone, reminder off
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mthe search lands on a row[2m > [22mphone, reminder and nudge on
+[31m[1mAssertionError[22m: account: Connect to my server: expected [ '只存在这台手机上', '导出备份（JSON）', '导入备份' ] to include 'Connect to my server'[39m
+[36m [2m❯[22m src/views/settings-pages.test.jsx:[2m229:67[22m[39m
+    [90m227|[39m       await act(async () => {})   // the passkey list, asked of the se…
+    [90m228|[39m       const have = [...titles(), ...[...host.querySelectorAll('.btn')]…
+    [90m229|[39m       for (const title of want) expect(have, `${page}: ${title}`).toCo…
+    [90m   |[39m                                                                   [31m^[39m
+    [90m230|[39m     }
+    [90m231|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/settings-pages.test.jsx[2m > [22mtranslations[2m > [22mevery page and searchable row title has a word in each pack
+[31m[1mAssertionError[22m: ../locales/ar.js: expected [ '本机数据' ] to deeply equal [][39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- [][39m
+[31m+ [[39m
+[31m+   "本机数据",[39m
+[31m+ ][39m
+
+[36m [2m❯[22m src/views/settings-pages.test.jsx:[2m512:29[22m[39m
+    [90m510|[39m     [35mfor[39m ([35mconst[39m [file[33m,[39m pack] [35mof[39m [33mObject[39m[33m.[39m[34mentries[39m(packs)) {
+    [90m511|[39m       const missing = keys.filter(k => !Object.hasOwn(pack, k) || !Str…
+    [90m512|[39m       [34mexpect[39m(missing[33m,[39m file)[33m.[39m[34mtoEqual[39m([])
+    [90m   |[39m                             [31m^[39m
+    [90m513|[39m     }
+    [90m514|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.accent.test.jsx[2m > [22mSettings: your own accent colour[2m > [22mignores a value that is not a colour
+[31m[1mAssertionError[22m: expected 'Yuan' to be 'Green' // Object.is equality[39m
+
+Expected: [32m"[7mGree[27mn"[39m
+Received: [31m"[7mYua[27mn"[39m
+
+[36m [2m❯[22m src/views/Settings.accent.test.jsx:[2m174:55[22m[39m
+    [90m172|[39m     mocks[33m.[39m[33mS[39m[33m.[39maccent [33m=[39m [32m'custom'[39m[33m;[39m mocks[33m.[39m[33mS[39m[33m.[39maccentCustom [33m=[39m [32m'red;}'[39m
+    [90m173|[39m     [34mmount[39m()
+    [90m174|[39m     [34mexpect[39m(host[33m.[39m[34mquerySelector[39m([32m'.lrow-v'[39m)[33m.[39mtextContent)[33m.[39m[34mtoBe[39m([32m'Green'[39m)
+    [90m   |[39m                                                       [31m^[39m
+    [90m175|[39m     [34mexpect[39m([34mown[39m()[33m.[39mclassList[33m.[39m[34mcontains[39m([32m'unset'[39m))[33m.[39m[34mtoBe[39m([35mtrue[39m)
+    [90m176|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.connstatus.test.jsx[2m > [22mguest footers[2m > [22mAccount says guest mode once: the banner says it, the footer only when the banner is off
+[31m[1mAssertionError[22m: expected [] to have a length of 1 but got +0[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 1[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m src/views/Settings.connstatus.test.jsx:[2m124:61[22m[39m
+    [90m122|[39m     mocks[33m.[39m[33mS[39m [33m=[39m { [33m...[39mmocks[33m.[39m[33mS[39m[33m,[39m connStatus[33m:[39m [35mfalse[39m }
+    [90m123|[39m     [34mact[39m(() [33m=>[39m root[33m.[39m[34mrender[39m([33m<[39m[33mSettings[39m [33mkey[39m[33m=[39m[32m"off"[39m [33mpage[39m[33m=[39m[32m"account"[39m [33m/[39m[33m>[39m))
+    [90m124|[39m     expect(footers().filter(f => f.includes('Guest mode'))).toHaveLeng…
+    [90m   |[39m                                                             [31m^[39m
+    [90m125|[39m   })
+    [90m126|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.connstatus.test.jsx[2m > [22mguest footers[2m > [22mAccount says guest mode in the footer once the banner's × hid it (#454)
+[31m[1mAssertionError[22m: expected [] to have a length of 1 but got +0[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 1[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m src/views/Settings.connstatus.test.jsx:[2m130:61[22m[39m
+    [90m128|[39m     mocks[33m.[39m[33mS[39m [33m=[39m { [33m...[39mmocks[33m.[39m[33mS[39m[33m,[39m connLocal[33m:[39m [35mfalse[39m }
+    [90m129|[39m     [34mact[39m(() [33m=>[39m root[33m.[39m[34mrender[39m([33m<[39m[33mSettings[39m [33mpage[39m[33m=[39m[32m"account"[39m [33m/[39m[33m>[39m))
+    [90m130|[39m     expect(footers().filter(f => f.includes('Guest mode'))).toHaveLeng…
+    [90m   |[39m                                                             [31m^[39m
+    [90m131|[39m   })
+    [90m132|[39m })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.update.test.jsx[2m > [22mSettings: support links[2m > [22mthe APK keeps the donation links and has no Play rating row
+[31m[1mAssertionError[22m: expected undefined to be truthy[39m
+
+[32m- Expected:[39m
+true
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/views/Settings.update.test.jsx:[2m205:36[22m[39m
+    [90m203|[39m     mocks[33m.[39mandroid [33m=[39m [35mtrue[39m
+    [90m204|[39m     [35mawait[39m [34mmount[39m()
+    [90m205|[39m     [34mexpect[39m([34mrow[39m([32m'Buy me a coffee'[39m))[33m.[39m[34mtoBeTruthy[39m()
+    [90m   |[39m                                    [31m^[39m
+    [90m206|[39m     [34mexpect[39m([34mrow[39m([32m'Ko-fi'[39m))[33m.[39m[34mtoBeTruthy[39m()
+    [90m207|[39m     [34mexpect[39m([34mrow[39m([32m'GitHub Sponsors'[39m))[33m.[39m[34mtoBeTruthy[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.update.test.jsx[2m > [22mSettings: support links[2m > [22mthe Google Play build shows only the rating row
+[31m[1mAssertionError[22m: expected undefined to be truthy[39m
+
+[32m- Expected:[39m
+true
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/views/Settings.update.test.jsx:[2m218:49[22m[39m
+    [90m216|[39m     [34mexpect[39m([34mrow[39m([32m'Ko-fi'[39m))[33m.[39m[34mtoBeUndefined[39m()
+    [90m217|[39m     [34mexpect[39m([34mrow[39m([32m'GitHub Sponsors'[39m))[33m.[39m[34mtoBeUndefined[39m()
+    [90m218|[39m     [34mexpect[39m([34mrow[39m([32m'Rate yuan-Gym on Google Play'[39m))[33m.[39m[34mtoBeTruthy[39m()
+    [90m   |[39m                                                 [31m^[39m
+    [90m219|[39m     expect(host.textContent).not.toContain('A coffee keeps it that way…
+    [90m220|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/13]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/views/Settings.update.test.jsx[2m > [22mSettings: support links[2m > [22mthe web keeps the donation links
+[31m[1mAssertionError[22m: expected undefined to be truthy[39m
+
+[32m- Expected:[39m
+true
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/views/Settings.update.test.jsx:[2m223:36[22m[39m
+    [90m221|[39m   [34mit[39m([32m'the web keeps the donation links'[39m[33m,[39m [35masync[39m () [33m=>[39m {
+    [90m222|[39m     [35mawait[39m [34mmount[39m()
+    [90m223|[39m     [34mexpect[39m([34mrow[39m([32m'Buy me a coffee'[39m))[33m.[39m[34mtoBeTruthy[39m()
+    [90m   |[39m                                    [31m^[39m
+    [90m224|[39m     [34mexpect[39m([34mrow[39m([32m'Rate yuan-Gym on Google Play'[39m))[33m.[39m[34mtoBeUndefined[39m()
+    [90m225|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/13]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m18 passed[39m[22m[90m (22)[39m
+[2m      Tests [22m [1m[31m13 failed[39m[22m[2m | [22m[1m[32m153 passed[39m[22m[90m (166)[39m
+[2m   Start at [22m 14:45:57
+[2m   Duration [22m 8.28s[2m (transform 39.81s, setup 1.75s, import 59.08s, tests 6.39s, environment 58.97s)[22m
+

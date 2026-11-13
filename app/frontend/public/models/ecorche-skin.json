@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "generator": "build-skin-from-atlas.mjs",
+  "source": "BodyParts3D 4.0 (CC BY 4.0), simplified by ashemag/human-atlas (MIT)",
+  "attribution": "皮肤网格：BodyParts3D 4.0 © DBCLS/NBDC，CC BY 4.0；经 ashemag/human-atlas 简化",
+  "gzip": true,
+  "bytes": 1132380,
+  "vertexCount": 22902,
+  "indexCount": 134232,
+  "triangleCount": 44744,
+  "offsets": {
+    "positions": 0,
+    "normals": 274824,
+    "indices": 412236,
+    "weights": 949164
+  },
+  "weightsPerVertex": 4,
+  "invalidSlug": 255,
+  "slugs": [
+    "chest",
+    "serratus",
+    "deltoids",
+    "upper-back",
+    "trapezius",
+    "lower-back",
+    "biceps",
+    "triceps",
+    "forearm",
+    "abs",
+    "obliques",
+    "hip-flexors",
+    "gluteal",
+    "quadriceps",
+    "hamstring",
+    "adductors",
+    "calves",
+    "tibialis"
+  ],
+  "bounds": [
+    [
+      -0.33411900000000005,
+      1.3877787807814457e-17,
+      -0.1452476
+    ],
+    [
+      0.332825,
+      1.7194711999999999,
+      0.146783
+    ]
+  ],
+  "inflateMax": 0.018,
+  "neutralized": {
+    "note": "中性人体外壳：性征贴片压平为封口曲面、臀沟填平、法线重算",
+    "patchVertices": 204,
+    "rimVertices": 67,
+    "patchSealZRange": [
+      0.07613,
+      0.07955
+    ],
+    "trianglesCulled": 0,
+    "indicesUntouched": true,
+    "analyticNormalVertices": 1511,
+    "pollutedFacesSkipped": 2991,
+    "maxCrotchFrontZ": 0.08193
+  },
+  "fitCheck": {
+    "buckets": 577,
+    "covered": 437,
+    "coverage": 0.818,
+    "meanGapMm": 9.1,
+    "margin": 0.01,
+    "skinOutsideRate": 0.9924,
+    "worstIntrusionMm": -6.7,
+    "meanSubcutaneousMm": 9.6,
+    "maxShiftMm": 36.6,
+    "alignedTo": "ecorche muscle+bone (shrink-wrap, Laplacian smoothed)",
+    "alignedAt": "2026-11-10"
+  }
+}

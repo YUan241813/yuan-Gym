@@ -1,0 +1,106 @@
+yuan-Gym — Notice of Modifications
+==================================
+
+This file records the modifications made to the upstream program, as required by
+section 5(a) of the GNU Affero General Public License, version 3.
+
+  Upstream program : openGym
+  Upstream author  : Copyright (C) 2026 Duarte Santos
+  Derived work     : yuan-Gym 1.4.14 (Android / iOS offline single-device build)
+  Date of change   : 2026-11-13
+  Licence          : GNU Affero General Public License v3.0 (or later)
+
+yuan-Gym is a modified version of openGym. It is NOT the original work, and the
+entire work as a whole remains licensed under the GNU AGPL v3.0 to anyone who
+receives a copy. The copyright notices of the original author and of all third
+parties are preserved; see LICENSE.txt (full licence text) and NOTICE.md
+(third-party notices). No additional restrictions are imposed on recipients.
+
+This program is distributed WITHOUT ANY WARRANTY; see LICENSE.txt, sections 15
+and 16.
+
+--------------------------------------------------------------------------
+Summary of changes (functional level, not a line-by-line diff)
+--------------------------------------------------------------------------
+
+The repository is not a git checkout, so no literal `git diff` exists. The
+following is a functional account of what was added, rewritten or removed
+relative to the openGym feature set. The full account, with file paths, is in
+DIFF-vs-openGym.md (included in the source archive).
+
+A. Added / rewritten
+  1. 3D anatomical body model: a 176-bundle / ~449k-vertex ecorche model with
+     124 individually clickable units, anatomical names, multi-selection and
+     exercise recommendations by selected part; replaces the flat body diagram
+     on the /muscles page. Sources: src/lib/anatomy/, src/components/BodyModel3D.jsx,
+     src/components/BodyMap3D.jsx, src/lib/muscle-facts.js.
+  1b. Skin layer derived from CC BY 4.0 anatomical atlas data, with attribution
+      preserved (see NOTICE.md and third_party/ATTRIBUTION.md).
+  2. "xiaoG" in-app AI assistant: persistent chat history, scheduling of a
+     generated plan into the calendar, in-chat settings changes (allow-list),
+     and navigation/operation of app features. Replaces the upstream AI coach.
+  3. Photo check-in: replaced the gym membership QR/barcode card with daily
+     photo check-ins, deletable photos, tombstone-based streak counting, and a
+     camera-capture fix in AndroidManifest.xml.
+  4. In-app support QR sheet (WeChat pay code) instead of external sponsor links.
+  5. Own branding: original icon artwork, app name, domain, default language,
+     storage key, backup/CSV prefixes, notification copy, and a self-signed
+     release key.
+  6. "Local data" settings page (export / import / auto-backup) replacing the
+     account page after accounts were removed.
+  7. Inline animated exercise previews in plan rows.
+
+B. Reworked
+  1. Exercise demo media converted from short mp4 clips to animated WebP
+     (cross-fade interpolated frames), and coverage extended to the whole
+     catalogue. NOTE: these media assets are NOT covered by this licence; see
+     the "Media" section below and NOTICE.md.
+  2. Default language changed from English to Chinese.
+  3. Fully offline packaging: exercise media, stills and 3D models are bundled
+     into the APK; the self-hosted server / Docker topology is no longer used.
+  4. Own build and release chain (vite -> check-bundle -> syncpub -> gradle),
+     replacing `cap sync` in the packaging step.
+
+C. Removed or disabled
+  1. Accounts, sign-in, passkeys, device pairing and profile switching (disabled).
+  2. Cross-device state sync and cloud storage (disabled; data is local only).
+  3. Self-hosted backend stack (server, worker, D1, mail, admin dashboard) —
+     no longer connected to the app.
+  4. The standalone AI Coach module (routes redirected into the assistant).
+  5. Hevy import, health-device integration (Health Connect / HealthKit),
+     first-party watch apps, third-party wearables, webhooks, MCP server, the
+     Integrations settings page, recovery-tip gating, sponsorship links, and
+     the membership-card check-in.
+
+D. What is NOT ours
+  The underlying training/planning/progress data model, the exercise text
+  catalogue (except the MIT-licensed subset identified in NOTICE.md), the UI
+  framework and routing, and the 19 locale packs remain openGym's AGPL code.
+  Removing or disabling a feature does not change its licence.
+
+--------------------------------------------------------------------------
+Media — separate rights, NOT covered by the AGPL
+--------------------------------------------------------------------------
+
+The exercise stills and animations are © Aliaksandr Makatserchyk, Gym visual,
+gymvisual.com. They are licensed to the project for use within this application
+only; they are not covered by the AGPL and are not part of the source code
+licensed here. See NOTICE.md, "Exercise media (stills and animations)".
+
+Those binaries are therefore NOT redistributed in the source archive. The
+archive does include the media staging/generation scripts (§1 of the AGPL
+requires the scripts that control generation and installation), the media
+NOTICE, and the catalogue text/JSON that the build reads. A commercial build
+needs its own licence from gymvisual.com or a replacement asset set. This is a
+known unresolved condition for commercial distribution and is recorded in
+SOURCE-README.md.
+
+--------------------------------------------------------------------------
+How to obtain the corresponding source
+--------------------------------------------------------------------------
+
+The complete machine-readable Corresponding Source for this build is bundled
+inside the application itself (source/yuan-Gym-source.zip, reachable from
+Settings > About > "Open source & legal"). It is available offline, at no
+further charge, to anyone who has a copy of the app, and requires no account,
+no repository and no network access. See SOURCE-README.md for the build steps.

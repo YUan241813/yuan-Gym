@@ -1,0 +1,1061 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90mD:/Self-developedSoftware/yuan-Gym/app/frontend[39m
+
+ [32m✓[39m scripts/app-icons.test.mjs [2m([22m[2m15 tests[22m[2m)[22m[33m 3096[2mms[22m[39m
+     [33m[2m✓[22m[39m finds nothing out of date [33m 2502[2mms[22m[39m
+ [32m✓[39m src/lib/mobile-state-file.test.js [2m([22m[2m5 tests[22m[2m)[22m[33m 9833[2mms[22m[39m
+     [33m[2m✓[22m[39m lands under its own name, with nothing left beside it [33m 9821[2mms[22m[39m
+ [32m✓[39m src/store/useStore.tabs-owner.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 8483[2mms[22m[39m
+     [33m[2m✓[22m[39m sign-out with a second tab open leaves nothing of the account in the browser [33m 6666[2mms[22m[39m
+     [33m[2m✓[22m[39m a profile created in the other tab shows in the guest tab at once, and the workout with it [33m 392[2mms[22m[39m
+     [33m[2m✓[22m[39m a sign-in to an existing account: the guest tab gets the account, the running workout included, once it is answered [33m 329[2mms[22m[39m
+     [33m[2m✓[22m[39m a guest tab on another screen is not told about a workout it does not show [33m 327[2mms[22m[39m
+     [33m[2m✓[22m[39m a new profile with nothing in it: the other tab takes it without waiting for a save [33m 367[2mms[22m[39m
+ [32m✓[39m src/seasonal/christmas.test.jsx [2m([22m[2m17 tests[22m[2m)[22m[33m 8782[2mms[22m[39m
+     [33m[2m✓[22m[39m falls at a start: a dozen flakes behind the page, nothing that takes a tap [33m 5903[2mms[22m[39m
+     [33m[2m✓[22m[39m peeks out of its card; one tap a day unwraps it, the next says come back tomorrow [33m 341[2mms[22m[39m
+     [33m[2m✓[22m[39m 1 to 24 December: today's door, and a tap opens the calendar [33m 471[2mms[22m[39m
+ [32m✓[39m src/lib/voice-strings.test.js [2m([22m[2m7 tests[22m[2m)[22m[33m 8487[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the phrases Siri listens for, in the page’s language [33m 6343[2mms[22m[39m
+     [33m[2m✓[22m[39m opens links the app follows [33m 2085[2mms[22m[39m
+ [32m✓[39m src/store/useStore.mobile-remote.test.jsx [2m([22m[2m22 tests[22m[2m)[22m[33m 5606[2mms[22m[39m
+     [33m[2m✓[22m[39m a change made meanwhile goes to the paired server with the token, and stays owed [33m 387[2mms[22m[39m
+     [33m[2m✓[22m[39m the next cold start asks the server again, and heals by itself once it accepts the token [33m 453[2mms[22m[39m
+     [33m[2m✓[22m[39m another account paired, then the app killed at once: the next start keeps her copy, and nothing of his reaches her account [33m 388[2mms[22m[39m
+     [33m[2m✓[22m[39m a phone that kept its own workouts out of the account does not push them in on the next start [33m 322[2mms[22m[39m
+     [33m[2m✓[22m[39m a copy adopted from the server with an older clock stays adopted after a kill straight after [33m 374[2mms[22m[39m
+     [33m[2m✓[22m[39m an answer without one leaves the pairing as it was [33m 721[2mms[22m[39m
+     [33m[2m✓[22m[39m are due once pairing from the first-launch screen has finished [33m 459[2mms[22m[39m
+ [32m✓[39m src/lib/i18n-core.test.js [2m([22m[2m57 tests[22m[2m)[22m[33m 4639[2mms[22m[39m
+ [32m✓[39m src/lib/starter.test.js [2m([22m[2m32 tests[22m[2m)[22m[33m 6382[2mms[22m[39m
+     [33m[2m✓[22m[39m only ever uses exercises the equipment allows (body weight is always allowed) [33m 1303[2mms[22m[39m
+     [33m[2m✓[22m[39m never repeats an exercise inside one routine [33m 1754[2mms[22m[39m
+     [33m[2m✓[22m[39m never stands in with a stretch, a hold or a drill that needs a ball nobody ticked [33m 2410[2mms[22m[39m
+     [33m[2m✓[22m[39m is deterministic [33m 411[2mms[22m[39m
+ [32m✓[39m src/store/useStore.media-backup.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 6943[2mms[22m[39m
+     [33m[2m✓[22m[39m a photo added after finishing is in the day's backup, one write for two picked together [33m 2314[2mms[22m[39m
+     [33m[2m✓[22m[39m taking a photo off, or deleting the workout, leaves the day's backup as it was [33m 2322[2mms[22m[39m
+     [33m[2m✓[22m[39m nothing written for other changes, or with the setting off [33m 2304[2mms[22m[39m
+ [32m✓[39m src/lib/backup-media.test.js [2m([22m[2m10 tests[22m[2m)[22m[33m 1377[2mms[22m[39m
+     [33m[2m✓[22m[39m only exports archives the import path accepts at the entry limit [33m 1197[2mms[22m[39m
+ [32m✓[39m scripts/check-locales.test.mjs [2m([22m[2m7 tests[22m[2m)[22m[33m 3561[2mms[22m[39m
+     [33m[2m✓[22m[39m passes packs that agree [33m 323[2mms[22m[39m
+     [33m[2m✓[22m[39m fails a translation that dropped the placeholder [33m 378[2mms[22m[39m
+     [33m[2m✓[22m[39m fails a translation that invented a placeholder [33m 418[2mms[22m[39m
+     [33m[2m✓[22m[39m accepts a translation that moved the placeholders around [33m 430[2mms[22m[39m
+     [33m[2m✓[22m[39m fails a blank translation, which the English fallback never covers [33m 582[2mms[22m[39m
+     [33m[2m✓[22m[39m still fails a key one pack does not carry [33m 461[2mms[22m[39m
+     [33m[2m✓[22m[39m passes the locale packs this app ships [33m 963[2mms[22m[39m
+ [32m✓[39m src/components/MuscleExplorer.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 5663[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps the dumbbell filter when switching from lower arms to upper arms [33m 1300[2mms[22m[39m
+     [33m[2m✓[22m[39m "All" body parts still clears the equipment filter [33m 677[2mms[22m[39m
+     [33m[2m✓[22m[39m shows a count while narrowed and a × that empties only the text [33m 811[2mms[22m[39m
+     [33m[2m✓[22m[39m starts with it chosen and its exercises listed [33m 369[2mms[22m[39m
+     [33m[2m✓[22m[39m lists the favourites that train the chosen muscle [33m 473[2mms[22m[39m
+     [33m[2m✓[22m[39m single-select behaviour is unchanged when enableMulti is not passed [33m 549[2mms[22m[39m
+     [33m[2m✓[22m[39m exposes a 多选 switch; two chips can stay on; Clear empties all [33m 791[2mms[22m[39m
+ [32m✓[39m src/store/useStore.legacy-upgrade.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 4437[2mms[22m[39m
+     [33m[2m✓[22m[39m another device synced meanwhile: the old app's offline rest time, plan day and note are kept [33m 3270[2mms[22m[39m
+     [33m[2m✓[22m[39m both sides changed the same setting: the merge decides as before, and the old copy is kept aside [33m 534[2mms[22m[39m
+     [33m[2m✓[22m[39m a copy this app wrote is never taken for an old app's [33m 446[2mms[22m[39m
+ [32m✓[39m src/views/GymReminder.test.jsx [2m([22m[2m30 tests[22m[2m)[22m[33m 10321[2mms[22m[39m
+     [33m[2m✓[22m[39m asks once you pause typing, with the newest text only; one letter asks nobody [33m 1356[2mms[22m[39m
+     [33m[2m✓[22m[39m results: name, then distance, kind and address on the grey line [33m 598[2mms[22m[39m
+     [33m[2m✓[22m[39m is biased to where you are when location is already allowed, without asking [33m 587[2mms[22m[39m
+     [33m[2m✓[22m[39m nothing found, and a search that did not answer, say so [33m 1091[2mms[22m[39m
+     [33m[2m✓[22m[39m picking a result opens the editor with its name, address and place [33m 657[2mms[22m[39m
+     [33m[2m✓[22m[39m an Apple row gets its place when picked; none: a toast, no editor [33m 780[2mms[22m[39m
+     [33m[2m✓[22m[39m dragging the map moves the gym (the pin stays put) and looks up the new address [33m 1319[2mms[22m[39m
+     [33m[2m✓[22m[39m Open in Google Maps on Android, Apple Maps on the iPhone [33m 365[2mms[22m[39m
+ [32m✓[39m src/views/CoachSetup.flow.test.jsx [2m([22m[2m35 tests[22m[2m)[22m[33m 3585[2mms[22m[39m
+[90mstdout[2m | src/lib/anatomy/skin.test.js[2m > [22m[2m局部充气[2m > [22m[2m一次全量更新远低于一帧预算（<16ms）
+[22m[39m  setLevels 平均 4.57 ms/次
+
+ [32m✓[39m src/lib/anatomy/skin.test.js [2m([22m[2m9 tests[22m[2m)[22m[33m 3884[2mms[22m[39m
+     [33m[2m✓[22m[39m 复位后顶点逐字节回到原始位置 [33m 3377[2mms[22m[39m
+ [32m✓[39m src/lib/coach-api.i18n.test.js [2m([22m[2m25 tests[22m[2m)[22m[33m 11165[2mms[22m[39m
+     [33m[2m✓[22m[39m ar translates each one, and the map reads it from the pack [33m 1074[2mms[22m[39m
+     [33m[2m✓[22m[39m de translates each one, and the map reads it from the pack [33m 674[2mms[22m[39m
+     [33m[2m✓[22m[39m es translates each one, and the map reads it from the pack [33m 608[2mms[22m[39m
+     [33m[2m✓[22m[39m fr translates each one, and the map reads it from the pack [33m 646[2mms[22m[39m
+     [33m[2m✓[22m[39m hi translates each one, and the map reads it from the pack [33m 1245[2mms[22m[39m
+     [33m[2m✓[22m[39m hu translates each one, and the map reads it from the pack [33m 711[2mms[22m[39m
+     [33m[2m✓[22m[39m it translates each one, and the map reads it from the pack [33m 616[2mms[22m[39m
+     [33m[2m✓[22m[39m ko translates each one, and the map reads it from the pack [33m 575[2mms[22m[39m
+     [33m[2m✓[22m[39m pl translates each one, and the map reads it from the pack [33m 698[2mms[22m[39m
+     [33m[2m✓[22m[39m pt-BR translates each one, and the map reads it from the pack [33m 632[2mms[22m[39m
+     [33m[2m✓[22m[39m ru translates each one, and the map reads it from the pack [33m 1169[2mms[22m[39m
+     [33m[2m✓[22m[39m tr translates each one, and the map reads it from the pack [33m 912[2mms[22m[39m
+     [33m[2m✓[22m[39m zh translates each one, and the map reads it from the pack [33m 605[2mms[22m[39m
+     [33m[2m✓[22m[39m zh-TW translates each one, and the map reads it from the pack [33m 512[2mms[22m[39m
+ [32m✓[39m src/views/Library.test.jsx [2m([22m[2m30 tests[22m[2m)[22m[33m 10053[2mms[22m[39m
+     [33m[2m✓[22m[39m puts favourites first, marked with a star, and leaves the rest in catalogue order [33m 547[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a favourite on top inside a body-part filter, but never pulls one in from elsewhere [33m 472[2mms[22m[39m
+     [33m[2m✓[22m[39m bn: every translated row is title-cased [33m 305[2mms[22m[39m
+     [33m[2m✓[22m[39m fr: every translated row is title-cased [33m 303[2mms[22m[39m
+     [33m[2m✓[22m[39m hi: every translated row is title-cased [33m 395[2mms[22m[39m
+     [33m[2m✓[22m[39m hu: every translated row is title-cased [33m 340[2mms[22m[39m
+     [33m[2m✓[22m[39m it: every translated row is title-cased [33m 499[2mms[22m[39m
+     [33m[2m✓[22m[39m pl: every translated row is title-cased [33m 314[2mms[22m[39m
+     [33m[2m✓[22m[39m pt: every translated row is title-cased [33m 304[2mms[22m[39m
+     [33m[2m✓[22m[39m pt-BR: every translated row is title-cased [33m 344[2mms[22m[39m
+     [33m[2m✓[22m[39m ru: every translated row is title-cased [33m 321[2mms[22m[39m
+     [33m[2m✓[22m[39m tr: every translated row is title-cased [33m 323[2mms[22m[39m
+     [33m[2m✓[22m[39m uk: every translated row is title-cased [33m 337[2mms[22m[39m
+     [33m[2m✓[22m[39m zh-TW: every translated row is title-cased [33m 549[2mms[22m[39m
+     [33m[2m✓[22m[39m uses the language's own plural forms (Russian: 1 своё, 2 своих, 5 своих) [33m 682[2mms[22m[39m
+     [33m[2m✓[22m[39m offers what comes close instead of "No match" when nothing matches exactly [33m 990[2mms[22m[39m
+     [33m[2m✓[22m[39m lists similar ones under a short result list, without repeating a result [33m 390[2mms[22m[39m
+ [32m✓[39m src/lib/exercises.test.js [2m([22m[2m22 tests[22m[2m)[22m[33m 3303[2mms[22m[39m
+     [33m[2m✓[22m[39m finds the sled presses by their angle [33m 418[2mms[22m[39m
+     [33m[2m✓[22m[39m pt: "supino com barra" finds the exercise [33m 387[2mms[22m[39m
+     [33m[2m✓[22m[39m pt: "peso morto barra" finds the exercise [33m 410[2mms[22m[39m
+     [33m[2m✓[22m[39m pt: "gemeos sentado" finds the exercise [33m 404[2mms[22m[39m
+     [33m[2m✓[22m[39m sv: "bänkpress skivstång" finds the exercise [33m 466[2mms[22m[39m
+     [33m[2m✓[22m[39m sv: "bankpress" finds the exercise [33m 349[2mms[22m[39m
+     [33m[2m✓[22m[39m sv: "sittande vadpress" finds the exercise [33m 333[2mms[22m[39m
+ [32m✓[39m src/lib/sync-fuzz.test.js [2m([22m[2m5 tests[22m[2m)[22m[33m 15782[2mms[22m[39m
+     [33m[2m✓[22m[39m three devices, skewed clocks [33m 2413[2mms[22m[39m
+     [33m[2m✓[22m[39m two or three devices, short gaps [33m 1027[2mms[22m[39m
+     [33m[2m✓[22m[39m three devices, long offline gaps [33m 7907[2mms[22m[39m
+     [33m[2m✓[22m[39m with resets [33m 1573[2mms[22m[39m
+     [33m[2m✓[22m[39m with unit switches [33m 2853[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-names.test.js [2m([22m[2m93 tests[22m[2m)[22m[33m 18699[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 460[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 443[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 527[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 794[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 608[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 709[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 863[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 694[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 652[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 842[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 700[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 713[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 818[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 1012[2mms[22m[39m
+     [33m[2m✓[22m[39m covers the v1.3 catalogue [33m 346[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 1023[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 826[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 1245[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 1568[2mms[22m[39m
+     [33m[2m✓[22m[39m is built from catalogue/i18n, for known exercises only, with non-empty names [33m 1078[2mms[22m[39m
+ [32m✓[39m src/views/Workout.superset-list-scroll.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 4664[2mms[22m[39m
+     [33m[2m✓[22m[39m a normal member completing moves to the partner row [33m 1054[2mms[22m[39m
+     [33m[2m✓[22m[39m a one-sided member scrolls to the partner once both sides are ticked [33m 616[2mms[22m[39m
+     [33m[2m✓[22m[39m a one-sided member with effort rating still scrolls to the partner [33m 1011[2mms[22m[39m
+     [33m[2m✓[22m[39m a normal member completing moves to the partner row [33m 438[2mms[22m[39m
+     [33m[2m✓[22m[39m a one-sided member scrolls to the partner once both sides are ticked [33m 631[2mms[22m[39m
+     [33m[2m✓[22m[39m a one-sided member with effort rating still scrolls to the partner [33m 902[2mms[22m[39m
+ [32m✓[39m src/sheets.backups.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 4460[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the backups and keeps them on save; without any, no field [33m 732[2mms[22m[39m
+     [33m[2m✓[22m[39m adds one from the library and removes one [33m 2799[2mms[22m[39m
+     [33m[2m✓[22m[39m lists the slot's backups first, and leaves them out while searching [33m 445[2mms[22m[39m
+     [33m[2m✓[22m[39m no backups, no section [33m 304[2mms[22m[39m
+ [32m✓[39m src/store/useStore.tabs-join.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 6055[2mms[22m[39m
+     [33m[2m✓[22m[39m offline: a workout finished in a tab that is then closed survives the other tab's next change, and reaches the server [33m 643[2mms[22m[39m
+     [33m[2m✓[22m[39m a second tab's pull keeps the workout running in the first [33m 325[2mms[22m[39m
+     [33m[2m✓[22m[39m the other tab takes a saved change into memory as soon as the browser says so [33m 403[2mms[22m[39m
+     [33m[2m✓[22m[39m sign-out in one tab counts, and keeps, what the other tab finished offline [33m 529[2mms[22m[39m
+     [33m[2m✓[22m[39m a tab that just signed in sees the other tab's saves and keeps them, running workout included [33m 2650[2mms[22m[39m
+     [33m[2m✓[22m[39m a tab that just signed in joins a closed tab's save on its next change [33m 369[2mms[22m[39m
+     [33m[2m✓[22m[39m a tab that signed out joins what another signed-out tab saves next [33m 375[2mms[22m[39m
+     [33m[2m✓[22m[39m a sign-in asks about what another guest tab saved too, and then joins only the account's saves [33m 497[2mms[22m[39m
+ [32m✓[39m src/views/Settings.media.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 5063[2mms[22m[39m
+     [33m[2m✓[22m[39m the JSON export says it leaves them out, the zip row and the Photos & videos row appear [33m 406[2mms[22m[39m
+     [33m[2m✓[22m[39m the zip export carries the state and the photo under its hash [33m 2851[2mms[22m[39m
+     [33m[2m✓[22m[39m Reset: no sweep before the empty state is on the server, nor for a guest [33m 452[2mms[22m[39m
+ [31m❯[39m src/views/History.grow.test.jsx [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 30218[2mms[22m[39m
+[31m     [31m×[31m renders the first page, then a page more each time its end comes into reach, newest first[39m[33m 20017[2mms[22m[39m
+     [33m[2m✓[22m[39m coming back renders as many rows as before (so the scroll position can be restored) [33m 8651[2mms[22m[39m
+     [33m[2m✓[22m[39m a short history is whole, with nothing observed [33m 368[2mms[22m[39m
+     [33m[2m✓[22m[39m without IntersectionObserver the whole list renders, as before [33m 1173[2mms[22m[39m
+ [32m✓[39m src/sheets.merge.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 4125[2mms[22m[39m
+     [33m[2m✓[22m[39m moves the history after a preview, and Undo brings it back [33m 3886[2mms[22m[39m
+ [32m✓[39m src/search-clear.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 5720[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: shows with text, and one tap empties the search [33m 2360[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: clears only the text; a body-part filter keeps its count [33m 1183[2mms[22m[39m
+     [33m[2m✓[22m[39m exercise picker: shows with text, and one tap empties the search [33m 1079[2mms[22m[39m
+     [33m[2m✓[22m[39m exercise picker: clears only the text; a body-part filter keeps its count [33m 1089[2mms[22m[39m
+ [32m✓[39m src/sheets.muscle-names.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 5665[2mms[22m[39m
+     [33m[2m✓[22m[39m picker row shows the display name, not the map id [33m 1880[2mms[22m[39m
+     [33m[2m✓[22m[39m config sheet tags read like the detail sheet, for a custom exercise and for power clean [33m 583[2mms[22m[39m
+     [33m[2m✓[22m[39m translates them in German too — "forearm" was staying English [33m 1194[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps the cardio target translated (marching on the spot, de) [33m 1036[2mms[22m[39m
+     [33m[2m✓[22m[39m Muscles explorer row names the target the same way [33m 967[2mms[22m[39m
+ [32m✓[39m src/auto-more.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 6095[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: the button coming into view loads the next 40 [33m 1877[2mms[22m[39m
+     [33m[2m✓[22m[39m picker: the next 50, the same way [33m 1196[2mms[22m[39m
+     [33m[2m✓[22m[39m muscle explorer: the results of a muscle load on too [33m 1498[2mms[22m[39m
+     [33m[2m✓[22m[39m stops watching once everything is shown [33m 827[2mms[22m[39m
+     [33m[2m✓[22m[39m without IntersectionObserver the button still loads more, and nothing breaks [33m 685[2mms[22m[39m
+ [32m✓[39m src/views/settings-pages.test.jsx [2m([22m[2m34 tests[22m[2m)[22m[33m 6828[2mms[22m[39m
+     [33m[2m✓[22m[39m guest in a browser [33m 1111[2mms[22m[39m
+     [33m[2m✓[22m[39m phone, reminder off [33m 979[2mms[22m[39m
+     [33m[2m✓[22m[39m phone, reminder and nudge on [33m 879[2mms[22m[39m
+     [33m[2m✓[22m[39m each search entry is a row on its page (guest in a browser) [33m 460[2mms[22m[39m
+     [33m[2m✓[22m[39m Rest timer opens the wheel and stores any value as seconds in restSec [33m 324[2mms[22m[39m
+     [33m[2m✓[22m[39m finds the translated choices of a row, and words of its own language [33m 507[2mms[22m[39m
+ [32m✓[39m src/lib/accent.test.js [2m([22m[2m28 tests[22m[2m)[22m[33m 758[2mms[22m[39m
+     [33m[2m✓[22m[39m the button text reads on the pressed shade too, not only at rest [33m 573[2mms[22m[39m
+ [32m✓[39m src/legacy-state.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 32949[2mms[22m[39m
+     [33m[2m✓[22m[39m draws History, Stats and the plan without throwing, with the old workouts in them [33m 1053[2mms[22m[39m
+ [32m✓[39m src/sheets.swap-same-muscle.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 7231[2mms[22m[39m
+     [33m[2m✓[22m[39m mid-workout: Swap exercise starts on the target muscle, same equipment first, All goes back [33m 2418[2mms[22m[39m
+     [33m[2m✓[22m[39m routine editor: a picker told what it replaces opens on that muscle [33m 592[2mms[22m[39m
+     [33m[2m✓[22m[39m an add opens on the whole list, with no same-muscle chip [33m 395[2mms[22m[39m
+     [33m[2m✓[22m[39m opens on All when nothing else trains that muscle, so a swap never starts on an empty list [33m 333[2mms[22m[39m
+   [33m[2m✓[22m[39m shows a labelled suggestions section for Dead Hang Stretch with a gym profile [33m 389[2mms[22m[39m
+     [33m[2m✓[22m[39m suggests available presses first without duplicates, and switching gym refreshes both lists [33m 1010[2mms[22m[39m
+     [33m[2m✓[22m[39m opens the next swap on the gym from Settings again [33m 1142[2mms[22m[39m
+     [33m[2m✓[22m[39m searches the entire available library, not just suggested movements [33m 913[2mms[22m[39m
+ [32m✓[39m src/components/SwipeRow.pointerup.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 3123[2mms[22m[39m
+   [33m[2m✓[22m[39m a swipe whose last moves were dropped still deletes: the finger lifted far past the line [33m 1184[2mms[22m[39m
+   [33m[2m✓[22m[39m every move delivered deletes as before [33m 974[2mms[22m[39m
+   [33m[2m✓[22m[39m a short swipe lifted where the last move was still only opens the row [33m 944[2mms[22m[39m
+ [32m✓[39m src/views/AdminCoach.test.jsx [2m([22m[2m59 tests[22m[2m)[22m[33m 8824[2mms[22m[39m
+     [33m[2m✓[22m[39m posts the chip's provider id and drops the previous test result with it [33m 345[2mms[22m[39m
+     [33m[2m✓[22m[39m a changed base URL is written on blur; an unchanged one writes nothing [33m 377[2mms[22m[39m
+ [32m✓[39m src/views/Workout.ex-unit.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 3374[2mms[22m[39m
+     [33m[2m✓[22m[39m labels and shows its own unit, next to an exercise in the profile’s [33m 562[2mms[22m[39m
+     [33m[2m✓[22m[39m steps by 5 lb and stores the exact kg [33m 1444[2mms[22m[39m
+     [33m[2m✓[22m[39m a weight typed in lb is stored in kg and cascades to the rows after it [33m 395[2mms[22m[39m
+ [32m✓[39m src/views/Workout.superset-scroll.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[33m 8085[2mms[22m[39m
+     [33m[2m✓[22m[39m rir: the scroll waits for the sheet to hand the page back, then lands on the partner row [33m 1342[2mms[22m[39m
+     [33m[2m✓[22m[39m rpe: the scroll waits for the sheet to hand the page back, then lands on the partner row [33m 679[2mms[22m[39m
+     [33m[2m✓[22m[39m a plain tick scrolls at once, as it did [33m 387[2mms[22m[39m
+     [33m[2m✓[22m[39m unpairing during the wait cancels the queued scroll [33m 683[2mms[22m[39m
+     [33m[2m✓[22m[39m does not scroll when two exercises are paired [33m 339[2mms[22m[39m
+     [33m[2m✓[22m[39m does not scroll on List → Cards [33m 699[2mms[22m[39m
+     [33m[2m✓[22m[39m a marker moved in the List does not scroll again once Cards comes back [33m 1035[2mms[22m[39m
+     [33m[2m✓[22m[39m does not scroll on mount while a sheet's restore is pending, off-screen row or not [33m 504[2mms[22m[39m
+     [33m[2m✓[22m[39m moving the marker's unit up or down does not scroll [33m 620[2mms[22m[39m
+     [33m[2m✓[22m[39m rating a set in a same-exercise superset still centres the partner row [33m 472[2mms[22m[39m
+     [33m[2m✓[22m[39m a row under the rest bar counts as off screen [33m 472[2mms[22m[39m
+ [32m✓[39m src/views/Workout.noprog.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 3840[2mms[22m[39m
+     [33m[2m✓[22m[39m the ⋯ menu stamps the entry, the card says so, and Undo takes it back [33m 883[2mms[22m[39m
+       [33m[2m✓[22m[39m Exercise settings saved unchanged, then Undo: the session counts at 102.5 and the next one goes on from there [33m 946[2mms[22m[39m
+       [33m[2m✓[22m[39m a swap, then Undo: the replacement counts at its own prescription, not the routine’s numbers [33m 393[2mms[22m[39m
+     [33m[2m✓[22m[39m a deload routine’s exercise saved in Exercise settings stays at the routine’s own numbers [33m 521[2mms[22m[39m
+ [32m✓[39m src/views/StructuralBalance.test.jsx [2m([22m[2m14 tests[22m[2m)[22m[33m 3036[2mms[22m[39m
+     [33m[2m✓[22m[39m falls back to the default template for a stored id that is not one, prototype names included [33m 682[2mms[22m[39m
+     [33m[2m✓[22m[39m is a row in Stats' list of pages that opens the screen, once there is a workout to read [33m 908[2mms[22m[39m
+     [33m[2m✓[22m[39m renders every template and scores the lifts the example history has [33m 312[2mms[22m[39m
+ [32m✓[39m src/views/Workout.noprog-session.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 4812[2mms[22m[39m
+     [33m[2m✓[22m[39m the header ⋮ keeps every exercise out, each card shows the marker, and a second tap counts them again [33m 1037[2mms[22m[39m
+     [33m[2m✓[22m[39m switched off, an exercise a deload routine keeps out stays out [33m 464[2mms[22m[39m
+     [33m[2m✓[22m[39m one card’s Undo counts that exercise again and the header no longer says the whole workout [33m 344[2mms[22m[39m
+     [33m[2m✓[22m[39m an exercise added afterwards joins it [33m 525[2mms[22m[39m
+     [33m[2m✓[22m[39m an exercise added to a routine session is marked as added there [33m 355[2mms[22m[39m
+     [33m[2m✓[22m[39m a routine added afterwards joins it, with its own prescription kept [33m 517[2mms[22m[39m
+     [33m[2m✓[22m[39m without it, an exercise kept out on its own is not passed on to one added after it [33m 497[2mms[22m[39m
+     [33m[2m✓[22m[39m a workout kept out as a whole opens with the switch on; switched off and saved, it counts again [33m 402[2mms[22m[39m
+     [33m[2m✓[22m[39m switched on in the editor and saved, the workout is kept out like one finished that way [33m 490[2mms[22m[39m
+ [32m✓[39m src/views/Home.queue.test.jsx [2m([22m[2m28 tests[22m[2m)[22m[33m 4011[2mms[22m[39m
+     [33m[2m✓[22m[39m replaces the weekday dots with one chip per session, in slot order, and lights the first [33m 334[2mms[22m[39m
+     [33m[2m✓[22m[39m is called Rotation in the language on screen, whatever an older save kept as its name [33m 756[2mms[22m[39m
+ [32m✓[39m src/views/Workout.keys.test.jsx [2m([22m[2m16 tests[22m[2m)[22m[33m 4811[2mms[22m[39m
+     [33m[2m✓[22m[39m Space ticks the next open set of the current exercise and starts its rest [33m 781[2mms[22m[39m
+     [33m[2m✓[22m[39m chip selection moves the highlight without logging sets in list [33m 402[2mms[22m[39m
+     [33m[2m✓[22m[39m chip selection moves the highlight without logging sets in cards [33m 481[2mms[22m[39m
+     [33m[2m✓[22m[39m scrolling follows the visible exercise without changing workout progress in compact [33m 354[2mms[22m[39m
+     [33m[2m✓[22m[39m scrolling follows the visible exercise without changing workout progress in list [33m 402[2mms[22m[39m
+ [32m✓[39m src/views/Plan.rotation.test.jsx [2m([22m[2m30 tests[22m[2m)[22m[33m 3867[2mms[22m[39m
+     [33m[2m✓[22m[39m switches to Routines and remembers it for next time [33m 371[2mms[22m[39m
+ [32m✓[39m src/views/Workout.swipe.test.jsx [2m([22m[2m29 tests[22m[2m)[22m[33m 5349[2mms[22m[39m
+     [33m[2m✓[22m[39m writes what it held to its own row after a set above it was copied or removed [33m 840[2mms[22m[39m
+     [33m[2m✓[22m[39m stops when its own row is removed, and logs nothing anywhere [33m 356[2mms[22m[39m
+     [33m[2m✓[22m[39m moves the saved owner along too, so a reload brings the hold back to its own row [33m 426[2mms[22m[39m
+     [33m[2m✓[22m[39m a long swipe toward the end copies, toward the start removes with Undo [33m 389[2mms[22m[39m
+     [33m[2m✓[22m[39m copies the pair from either row, and draws both rows without swiping [33m 316[2mms[22m[39m
+     [33m[2m✓[22m[39m gives way to a real swipe while it is still nudging the row [33m 416[2mms[22m[39m
+ [32m✓[39m src/views/Stats.bodyweight.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 2701[2mms[22m[39m
+     [33m[2m✓[22m[39m is not offered without a body weight to compare with, or with a single workout [33m 456[2mms[22m[39m
+     [33m[2m✓[22m[39m draws the lift as a percentage of the body weight it was logged at [33m 365[2mms[22m[39m
+     [33m[2m✓[22m[39m offers the basis toggle, and the top set reads the heaviest set over body weight [33m 498[2mms[22m[39m
+     [33m[2m✓[22m[39m names the estimated 1RM, not a weight lifted, in the point note [33m 303[2mms[22m[39m
+     [33m[2m✓[22m[39m offers no Est. 1RM basis for an exercise assisted by its routine setting, and says heaviest set [33m 396[2mms[22m[39m
+     [33m[2m✓[22m[39m still offers Bodyweight for sets above the 1RM estimate cap, on the heaviest set [33m 345[2mms[22m[39m
+     [33m[2m✓[22m[39m follows the date range and says so when it holds fewer than two workouts [33m 326[2mms[22m[39m
+ [32m✓[39m src/unknown-exercise-ids.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 3790[2mms[22m[39m
+     [33m[2m✓[22m[39m Home, the plan, the routine editor and the Library draw it [33m 1381[2mms[22m[39m
+     [33m[2m✓[22m[39m Home draws it on a rotation too [33m 328[2mms[22m[39m
+     [33m[2m✓[22m[39m Stats draws it, and its exercise picker leaves out the id it has no name for [33m 659[2mms[22m[39m
+     [33m[2m✓[22m[39m starting the routine and finishing the session keep it, in the new workout too [33m 411[2mms[22m[39m
+ [32m✓[39m src/App.back-button.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 4454[2mms[22m[39m
+     [33m[2m✓[22m[39m brings Stats back where it was scrolled, not at the top [33m 1183[2mms[22m[39m
+     [33m[2m✓[22m[39m takes Body measurements back to Stats, the screen it is opened from [33m 1526[2mms[22m[39m
+     [33m[2m✓[22m[39m a page opened at the top is remembered at the top, though no scroll event says so [33m 1736[2mms[22m[39m
+ [32m✓[39m src/lib/pack-manifests.test.js [2m([22m[2m6 tests[22m[2m)[22m[33m 3348[2mms[22m[39m
+     [33m[2m✓[22m[39m every catalogue exercise is in its figure’s pack, at every quality [33m 2854[2mms[22m[39m
+     [33m[2m✓[22m[39m exercises drawn once are in both packs; a twin only in its own figure’s [33m 414[2mms[22m[39m
+ [32m✓[39m src/sheets.config-rest.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 3711[2mms[22m[39m
+     [33m[2m✓[22m[39m reads Default with the default rest when the exercise has none, and saves nothing new [33m 432[2mms[22m[39m
+     [33m[2m✓[22m[39m "No timer" is saved as restOff, and Default takes it away again [33m 464[2mms[22m[39m
+     [33m[2m✓[22m[39m Pick a time opens on the default rest that applies, not on 0:00, and keeps what it picks (#735) [33m 424[2mms[22m[39m
+     [33m[2m✓[22m[39m the warm-ups’ wheel opens on their rest that applies: the profile’s, else the work sets’ (#735) [33m 627[2mms[22m[39m
+     [33m[2m✓[22m[39m without its own, the row names the profile's warm-up rest and still writes nothing [33m 346[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps what it was given: a warm-up rest from the Coach, "no timer", a break between sides [33m 479[2mms[22m[39m
+ [32m✓[39m src/App.scroll-top.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1960[2mms[22m[39m
+     [33m[2m✓[22m[39m the button comes in far down, and a tap glides to the top [33m 585[2mms[22m[39m
+     [33m[2m✓[22m[39m the tab you are on, tapped again, glides to the top too [33m 366[2mms[22m[39m
+     [33m[2m✓[22m[39m leaves the remembered position alone: back from History lands where Stats was [33m 736[2mms[22m[39m
+ [32m✓[39m src/lib/rest-alert.native.test.js [2m([22m[2m25 tests[22m[2m)[22m[33m 3885[2mms[22m[39m
+     [33m[2m✓[22m[39m schedules the end on the phone, like Android, and rejects nothing [33m 616[2mms[22m[39m
+     [33m[2m✓[22m[39m asks once, and after a "Don't allow" never again, not even after a restart [33m 408[2mms[22m[39m
+     [33m[2m✓[22m[39m a dialog closed by leaving the app is not a "Don't allow": asked again next launch, not this session [33m 510[2mms[22m[39m
+     [33m[2m✓[22m[39m does not ask when notifications are already allowed or turned off [33m 495[2mms[22m[39m
+ [32m✓[39m src/lib/media-sync.test.js [2m([22m[2m31 tests[22m[2m)[22m[33m 2520[2mms[22m[39m
+     [33m[2m✓[22m[39m signed in, evicts synced main files over the cap — never a pending one or a poster the state shows [33m 878[2mms[22m[39m
+     [33m[2m✓[22m[39m a guest never loses a referenced file to the cap [33m 1218[2mms[22m[39m
+ [32m✓[39m src/store/useStore.tabs.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 2352[2mms[22m[39m
+     [33m[2m✓[22m[39m the stale tab quotes its own revision: its push is refused, merged, and the other tab's workout survives [33m 549[2mms[22m[39m
+     [33m[2m✓[22m[39m a rev check in the stale tab compares with its own revision and pulls [33m 307[2mms[22m[39m
+ [32m✓[39m src/components/Seasonal.lazy.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 2517[2mms[22m[39m
+     [33m[2m✓[22m[39m only components/Seasonal.jsx names a theme module, and only through import() (halloween) [33m 416[2mms[22m[39m
+     [33m[2m✓[22m[39m only components/Seasonal.jsx names a theme module, and only through import() (christmas) [33m 1031[2mms[22m[39m
+     [33m[2m✓[22m[39m on: the module comes in and draws its spots [33m 367[2mms[22m[39m
+ [32m✓[39m src/components/Passkeys.test.jsx [2m([22m[2m29 tests[22m[2m)[22m[33m 1446[2mms[22m[39m
+ [32m✓[39m src/components/Media.test.jsx [2m([22m[2m26 tests[22m[2m)[22m[33m 2607[2mms[22m[39m
+     [33m[2m✓[22m[39m a video without a poster shows play; a link shows play for a video site and link otherwise; nothing shows the dumbbell [33m 363[2mms[22m[39m
+ [32m✓[39m src/views/Plan.swipe.test.jsx [2m([22m[2m17 tests[22m[2m)[22m[33m 2544[2mms[22m[39m
+ [32m✓[39m src/views/Workout.auto-holds.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 2980[2mms[22m[39m
+     [33m[2m✓[22m[39m runs the rest of the exercise after one tap: hold, rest, 3-2-1, hold [33m 674[2mms[22m[39m
+     [33m[2m✓[22m[39m switches sides with the short pause, and the right side counts in by itself [33m 330[2mms[22m[39m
+     [33m[2m✓[22m[39m moves on to a timed exercise after it, making it the current one, and stops at a reps one [33m 518[2mms[22m[39m
+     [33m[2m✓[22m[39m Stop auto leaves the rest of the workout as it always was [33m 378[2mms[22m[39m
+     [33m[2m✓[22m[39m never counts in under a sheet [33m 331[2mms[22m[39m
+ [32m✓[39m src/components/Tour.test.jsx [2m([22m[2m30 tests[22m[2m)[22m[33m 26813[2mms[22m[39m
+     [33m[2m✓[22m[39m asks once: the card takes focus, Skip closes it and it is never asked again [33m 489[2mms[22m[39m
+     [33m[2m✓[22m[39m also asks how much app this profile wants (Settings → Modules): Everything until a tap, a tap applies it [33m 533[2mms[22m[39m
+     [33m[2m✓[22m[39m Show me starts the tour on Home, and Escape is a no as well [33m 619[2mms[22m[39m
+     [33m[2m✓[22m[39m a tour closed halfway is picked up where it was, once [33m 365[2mms[22m[39m
+     [33m[2m✓[22m[39m goes from stop to stop, back as well, with a counter [33m 558[2mms[22m[39m
+     [33m[2m✓[22m[39m Tab stays inside the card, Escape ends the tour and marks it seen [33m 327[2mms[22m[39m
+     [33m[2m✓[22m[39m a missing optional stop is passed over in the direction of travel [33m 670[2mms[22m[39m
+     [33m[2m✓[22m[39m the closing card offers the tutorials, and Let’s go ends it and goes Home [33m 365[2mms[22m[39m
+     [33m[2m✓[22m[39m a tutorial from the closing card runs from its start, and the tour counts as seen [33m 363[2mms[22m[39m
+     [33m[2m✓[22m[39m points at the real tab and waits for the tap, then goes on on the new screen [33m 908[2mms[22m[39m
+     [33m[2m✓[22m[39m Show me taps it for you [33m 371[2mms[22m[39m
+     [33m[2m✓[22m[39m Settings is shown the way it is reached: Home first, then the gear [33m 1014[2mms[22m[39m
+     [33m[2m✓[22m[39m moves with a scroll, speaks from the middle while it is off screen, and brings it back [33m 578[2mms[22m[39m
+     [33m[2m✓[22m[39m waits while the user is still scrolling before bringing it back [33m 1621[2mms[22m[39m
+     [33m[2m✓[22m[39m the Start button is the tour’s: a practice session nothing saves, gone when the tour moves on [33m 599[2mms[22m[39m
+     [33m[2m✓[22m[39m tapping the tick goes on, and skipping mid-workout drops the sample and leaves the workout [33m 1033[2mms[22m[39m
+     [33m[2m✓[22m[39m the practice is over before the way to Stats, on Home [33m 431[2mms[22m[39m
+     [33m[2m✓[22m[39m builds the routine in a copy: quit before Save and nothing is left behind [33m 2275[2mms[22m[39m
+     [33m[2m✓[22m[39m quitting halfway (Escape on the name) leaves nothing either, and keeps no resume point [33m 942[2mms[22m[39m
+     [33m[2m✓[22m[39m Save puts it in the real plan, and then it shows the way back to give it a day [33m 2482[2mms[22m[39m
+     [33m[2m✓[22m[39m Save waits for an exercise, and closing the picker empty goes back to Add exercise [33m 1990[2mms[22m[39m
+     [33m[2m✓[22m[39m runs on a pretend copy: the real data is never written, and is back as it was [33m 810[2mms[22m[39m
+     [33m[2m✓[22m[39m the last card says so: the copy is gone by then [33m 387[2mms[22m[39m
+     [33m[2m✓[22m[39m walks the real form, and Next past Create makes nothing [33m 2642[2mms[22m[39m
+     [33m[2m✓[22m[39m the form’s own Create makes it, and the tour follows [33m 2015[2mms[22m[39m
+     [33m[2m✓[22m[39m closing the form goes back to the row that opens it [33m 1551[2mms[22m[39m
+ [32m✓[39m src/sheets.custom-media.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 2256[2mms[22m[39m
+     [33m[2m✓[22m[39m a picked file shows in the form, and Create saves its ref and the cleaned link — never the file name [33m 377[2mms[22m[39m
+     [33m[2m✓[22m[39m says a guest keeps it on this device only, and hides Add on a server that stores no media [33m 468[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-substitutes.test.js [2m([22m[2m5 tests[22m[2m)[22m[33m 10287[2mms[22m[39m
+     [33m[2m✓[22m[39m covers every catalogue exercise, without relying on a manually mapped movement family [33m 10240[2mms[22m[39m
+ [32m✓[39m src/search-count.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 15130[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: finds aliases, follows edits and clears, and keeps filters [33m 5679[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: appears with a search, follows it, and goes when the search is cleared [33m 1659[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: counts a body-part filter too, and reads "1 exercise" for one [33m 1195[2mms[22m[39m
+     [33m[2m✓[22m[39m exercise picker: finds aliases, follows edits and clears, and keeps filters [33m 3663[2mms[22m[39m
+     [33m[2m✓[22m[39m exercise picker: appears with a search, follows it, and goes when the search is cleared [33m 1949[2mms[22m[39m
+     [33m[2m✓[22m[39m exercise picker: counts a body-part filter too, and reads "1 exercise" for one [33m 978[2mms[22m[39m
+ [32m✓[39m src/sheets.workout-media.test.jsx [2m([22m[2m14 tests[22m[2m)[22m[33m 2264[2mms[22m[39m
+     [33m[2m✓[22m[39m asks for images and videos, several at once [33m 311[2mms[22m[39m
+     [33m[2m✓[22m[39m a full workout offers no Add and says how many fit; a seventh picked in a batch is refused [33m 311[2mms[22m[39m
+ [32m✓[39m src/views/Workout.plates.test.jsx [2m([22m[2m16 tests[22m[2m)[22m[33m 2571[2mms[22m[39m
+     [33m[2m✓[22m[39m a per-side bar exercise (barbell lunge): the work rows load from the sides' shared bar [33m 649[2mms[22m[39m
+ [32m✓[39m src/components/Heatmap.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 2271[2mms[22m[39m
+   [33m[2m✓[22m[39m changes shading and legend by metric while retaining day actions and history [33m 452[2mms[22m[39m
+   [33m[2m✓[22m[39m uses the local session day and canonical completed volume [33m 324[2mms[22m[39m
+ [32m✓[39m src/exercise-view.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 2890[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: a list until the button beside the search turns the cards on, and back [33m 753[2mms[22m[39m
+     [33m[2m✓[22m[39m reads a profile saved before the setting existed as the list [33m 305[2mms[22m[39m
+     [33m[2m✓[22m[39m picker: follows the same setting and switches it beside its own search, by muscle too [33m 1132[2mms[22m[39m
+     [33m[2m✓[22m[39m Muscles page: the results follow the setting, with the button beside their search [33m 396[2mms[22m[39m
+ [32m✓[39m src/App.swipe-preview.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 2564[2mms[22m[39m
+     [33m[2m✓[22m[39m is the page the back button goes to, at its scroll position, inert and hidden [33m 1644[2mms[22m[39m
+     [33m[2m✓[22m[39m becomes the page when the swipe lands: the same element, no second mount, back where it was scrolled [33m 373[2mms[22m[39m
+ [32m✓[39m src/views/Stats.recovery.test.jsx [2m([22m[2m18 tests[22m[2m)[22m[33m 4070[2mms[22m[39m
+     [33m[2m✓[22m[39m dispatches real clicks through Balance, Fatigue, and Strength and preserves selection [33m 913[2mms[22m[39m
+     [33m[2m✓[22m[39m updates the rendered Fatigue map and Balance window on the real 60-second interval [33m 386[2mms[22m[39m
+     [33m[2m✓[22m[39m renders fixed absolute bands through the actual Fatigue and Strength views [33m 511[2mms[22m[39m
+ [32m✓[39m src/seasonal/advent-doors.test.js [2m([22m[2m7 tests[22m[2m)[22m[33m 3347[2mms[22m[39m
+     [33m[2m✓[22m[39m every string behind a door is in every locale pack [33m 3325[2mms[22m[39m
+ [32m✓[39m src/views/CoachIntake.test.jsx [2m([22m[2m44 tests[22m[2m)[22m[33m 4187[2mms[22m[39m
+     [33m[2m✓[22m[39m the session wheels never go under ten minutes [33m 324[2mms[22m[39m
+     [33m[2m✓[22m[39m the pre-selected days follow the count while nobody has picked their own [33m 313[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.drag.test.jsx [2m([22m[2m22 tests[22m[2m)[22m[33m 4627[2mms[22m[39m
+     [33m[2m✓[22m[39m moves a whole grouped unit, never splits another group, and preserves every occurrence payload [33m 604[2mms[22m[39m
+     [33m[2m✓[22m[39m cancels without persistence on outside release, lost capture, Escape, blur, hidden document, or second pointer [33m 1025[2mms[22m[39m
+ [32m✓[39m src/store/useStore.mobile-durable.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 2927[2mms[22m[39m
+     [33m[2m✓[22m[39m a ticked set is in the file at once, not after the usual wait [33m 2392[2mms[22m[39m
+ [32m✓[39m src/components/PasswordAuth.test.jsx [2m([22m[2m29 tests[22m[2m)[22m[33m 1245[2mms[22m[39m
+ [32m✓[39m src/lib/pt-br-instructions.test.js [2m([22m[2m5 tests[22m[2m)[22m[33m 2086[2mms[22m[39m
+     [33m[2m✓[22m[39m contains only known exercises with complete, non-empty step lists [33m 1926[2mms[22m[39m
+ [32m✓[39m src/sheets.plates.test.jsx [2m([22m[2m13 tests[22m[2m)[22m[33m 1174[2mms[22m[39m
+ [32m✓[39m src/components/DateField.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1351[2mms[22m[39m
+ [32m✓[39m src/lib/edge-swipe-back.coexist.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 2004[2mms[22m[39m
+     [33m[2m✓[22m[39m a set row still deletes from a swipe that starts mid-row; from the edge it is the page's [33m 1922[2mms[22m[39m
+ [32m✓[39m src/views/Stats.redesign.test.jsx [2m([22m[2m17 tests[22m[2m)[22m[33m 2693[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the streak once, folds Challenges, lists three recent workouts and History has the rest [33m 613[2mms[22m[39m
+ [32m✓[39m src/sheets.starter.test.jsx [2m([22m[2m14 tests[22m[2m)[22m[33m 1303[2mms[22m[39m
+     [33m[2m✓[22m[39m still reuses the routines when the same fitted plan is loaded twice [33m 307[2mms[22m[39m
+ [32m✓[39m src/views/FocusView.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1136[2mms[22m[39m
+ [32m✓[39m src/sheets.picker-type.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1684[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the Type row between the muscle groups and the equipment, like the Library [33m 391[2mms[22m[39m
+     [33m[2m✓[22m[39m narrows the list to the picked type [33m 552[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps the type across a muscle group that has none of it, and picks it back up [33m 737[2mms[22m[39m
+ [32m✓[39m src/views/Workout.sheet-scroll.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1283[2mms[22m[39m
+     [33m[2m✓[22m[39m scrolls to the partner row after the sheet has finished putting the page back [33m 930[2mms[22m[39m
+     [33m[2m✓[22m[39m a plain tick still scrolls to the partner row at once [33m 349[2mms[22m[39m
+ [32m✓[39m src/sheets.replace.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1509[2mms[22m[39m
+     [33m[2m✓[22m[39m titles the picker for what the pick is for [33m 519[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the swap icon when replacing and the plus icon when adding (#561) [33m 512[2mms[22m[39m
+ [32m✓[39m src/views/Workout.hold.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1528[2mms[22m[39m
+     [33m[2m✓[22m[39m ran out on its own: the chime and its buzz pattern, and no tick beep or short buzz after them [33m 361[2mms[22m[39m
+     [33m[2m✓[22m[39m right held too: the set's full rest, not another switch [33m 327[2mms[22m[39m
+ [32m✓[39m src/sheets.workoutdate.test.jsx [2m([22m[2m19 tests[22m[2m)[22m[33m 1366[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.remote-file.test.js [2m([22m[2m4 tests[22m[2m)[22m[33m 587[2mms[22m[39m
+     [33m[2m✓[22m[39m on iOS is written to Library/NoCloud, never to Documents, and the folder is marked right away [33m 404[2mms[22m[39m
+ [32m✓[39m src/card-dismiss.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1832[2mms[22m[39m
+     [33m[2m✓[22m[39m Library: Add to my plan does not open the exercise, the name does [33m 337[2mms[22m[39m
+     [33m[2m✓[22m[39m the muscle explorer: Plan plans, the name opens the details [33m 451[2mms[22m[39m
+ [32m✓[39m src/lib/sw-media.test.js [2m([22m[2m10 tests[22m[2m)[22m[33m 1884[2mms[22m[39m
+     [33m[2m✓[22m[39m stays under its cap, dropping the least recently used first [33m 1137[2mms[22m[39m
+ [32m✓[39m src/lib/import-csv.hostile.test.js [2m([22m[2m23 tests[22m[2m)[22m[33m 1053[2mms[22m[39m
+     [33m[2m✓[22m[39m a thousand rows, each a different unknown exercise, is one workout with a thousand entries [33m 537[2mms[22m[39m
+ [32m✓[39m src/lib/system-bars.test.js [2m([22m[2m5 tests[22m[2m)[22m[33m 617[2mms[22m[39m
+     [33m[2m✓[22m[39m asks for dark icons on light and light icons on dark, once per change [33m 384[2mms[22m[39m
+ [32m✓[39m src/components/DurationWheel.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1162[2mms[22m[39m
+ [32m✓[39m src/lib/media-store-fs.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 214[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.move.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 1901[2mms[22m[39m
+     [33m[2m✓[22m[39m moves a superset member inside its superset and persists complete occurrences [33m 396[2mms[22m[39m
+     [33m[2m✓[22m[39m moves the selected duplicate occurrence without aliasing its configuration [33m 355[2mms[22m[39m
+ [32m✓[39m src/lib/workout-at.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 211[2mms[22m[39m
+ [32m✓[39m src/views/Stats.ex-range.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1920[2mms[22m[39m
+     [33m[2m✓[22m[39m starts on All and cuts the top-set line to the picked range, Best staying all-time [33m 631[2mms[22m[39m
+     [33m[2m✓[22m[39m applies to the other chart modes too [33m 650[2mms[22m[39m
+     [33m[2m✓[22m[39m shows a hint instead of the chart when the range holds fewer than two workouts [33m 406[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.swipe.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1347[2mms[22m[39m
+     [33m[2m✓[22m[39m is remove-only: one pane, out of reach while shut, and a swipe toward the end does nothing [33m 501[2mms[22m[39m
+ [32m✓[39m src/components/RoutineShare.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1440[2mms[22m[39m
+     [33m[2m✓[22m[39m shares an yuanzq.top/r link with a short text, without weights or name by default [33m 534[2mms[22m[39m
+     [33m[2m✓[22m[39m takes the weights and the name along when switched on [33m 415[2mms[22m[39m
+ [32m✓[39m src/views/Workout.muscle-map.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 1348[2mms[22m[39m
+     [33m[2m✓[22m[39m is in the header in cards [33m 573[2mms[22m[39m
+ [32m✓[39m src/lib/zh-tw-instructions.test.js [2m([22m[2m3 tests[22m[2m)[22m[33m 1269[2mms[22m[39m
+     [33m[2m✓[22m[39m contains only known exercises with complete, non-empty step lists [33m 1097[2mms[22m[39m
+ [32m✓[39m src/store/backup-roundtrip.property.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 372[2mms[22m[39m
+ [32m✓[39m src/views/Muscles.render.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1138[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the 3D muscle picker without throwing [33m 637[2mms[22m[39m
+     [33m[2m✓[22m[39m opens straight onto a muscle when ?m= names one [33m 488[2mms[22m[39m
+ [32m✓[39m src/views/Workout.test.jsx [2m([22m[2m233 tests[22m[2m)[22m[33m 24497[2mms[22m[39m
+   [33m[2m✓[22m[39m edits a saved set without running live completion, rest or success feedback [33m 589[2mms[22m[39m
+     [33m[2m✓[22m[39m auto-captures superset members without prompting, then leaves the completed unit for Next [33m 324[2mms[22m[39m
+     [33m[2m✓[22m[39m still advances and rests for sets completed after a removal [33m 307[2mms[22m[39m
+     [33m[2m✓[22m[39m shows one superset member and follows round-major completion order [33m 662[2mms[22m[39m
+     [33m[2m✓[22m[39m uses the superset chevrons and dots for inspection without completing work [33m 326[2mms[22m[39m
+     [33m[2m✓[22m[39m clears inspected set pointers when superset completion auto-advances [33m 741[2mms[22m[39m
+   [33m[2m✓[22m[39m slides a superset in exactly as it lands, Unpair and all [33m 408[2mms[22m[39m
+   [33m[2m✓[22m[39m slides a lone exercise in with its Make superset buttons, as it lands [33m 337[2mms[22m[39m
+ [32m✓[39m src/store/useStore.adopt-hold.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 794[2mms[22m[39m
+ [32m✓[39m src/sheets.picker-equipment.test.jsx [2m([22m[2m1 test[22m[2m)[22m[33m 1105[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps the dumbbell filter when switching from lower arms to upper arms [33m 1101[2mms[22m[39m
+ [32m✓[39m src/sheets.backfill.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1552[2mms[22m[39m
+     [33m[2m✓[22m[39m asks what to do when the day already has a workout [33m 350[2mms[22m[39m
+     [33m[2m✓[22m[39m a workout with photos or videos says Replace moves them to the new one [33m 411[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.listener.test.js [2m([22m[2m2 tests[22m[2m)[22m[33m 763[2mms[22m[39m
+     [33m[2m✓[22m[39m reaches the catch instead of raising an unhandled rejection [33m 544[2mms[22m[39m
+ [32m✓[39m src/lib/anim-quality.test.js [2m([22m[2m14 tests[22m[2m)[22m[33m 758[2mms[22m[39m
+     [33m[2m✓[22m[39m agrees with lib/exercises.js gifSrc for every catalogue exercise [33m 721[2mms[22m[39m
+ [32m✓[39m src/sheets.favourites.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1767[2mms[22m[39m
+     [33m[2m✓[22m[39m lists favourites first and marks them, keeping the rest in catalogue order [33m 731[2mms[22m[39m
+     [33m[2m✓[22m[39m offers a Favourites chip only when there are favourites, and it filters to them [33m 710[2mms[22m[39m
+ [32m✓[39m src/views/Admin.recovery.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 817[2mms[22m[39m
+     [33m[2m✓[22m[39m is there for a plain profile on an instance without password sign-in, asks, then shows the code once, locked [33m 394[2mms[22m[39m
+ [32m✓[39m src/sheets.weighin-history.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 1312[2mms[22m[39m
+ [32m✓[39m src/lib/i18n-plural.test.js [2m([22m[2m9 tests[22m[2m)[22m[33m 836[2mms[22m[39m
+     [33m[2m✓[22m[39m gives every tn() key real one / few / many forms in ru, uk and pl (#365) [33m 737[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.replace.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 813[2mms[22m[39m
+     [33m[2m✓[22m[39m "+" on a picker row swaps the exercise in place and keeps the slot's numbers [33m 373[2mms[22m[39m
+ [32m✓[39m src/views/Stats.sections.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1242[2mms[22m[39m
+     [33m[2m✓[22m[39m groups the cards into parts with headings, the tour anchors inside them [33m 512[2mms[22m[39m
+ [32m✓[39m src/lib/heart-rate.test.js [2m([22m[2m9 tests[22m[2m)[22m[33m 715[2mms[22m[39m
+     [33m[2m✓[22m[39m a profile without the fields loads and saves byte for byte [33m 549[2mms[22m[39m
+ [32m✓[39m src/lib/plates.property.test.js [2m([22m[2m10 tests[22m[2m)[22m[33m 704[2mms[22m[39m
+ [32m✓[39m src/components/SetVideo.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1474[2mms[22m[39m
+     [33m[2m✓[22m[39m holds the video to the server's caps, and says why one is refused [33m 314[2mms[22m[39m
+     [33m[2m✓[22m[39m signed in: "Keep videos on this phone only" marks it, and a server that keeps none does by itself [33m 338[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.grip.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 957[2mms[22m[39m
+     [33m[2m✓[22m[39m puts a grip on every row, out of the accessibility tree, named for what it does [33m 342[2mms[22m[39m
+ [32m✓[39m src/lib/pt-br-locale.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 235[2mms[22m[39m
+ [32m✓[39m src/lib/search-typo.test.js [2m([22m[2m12 tests[22m[2m)[22m[33m 1503[2mms[22m[39m
+   [33m[2m✓[22m[39m searchExercises over the real catalogue returns only exact hits for correctly spelled words [33m 615[2mms[22m[39m
+ [32m✓[39m src/views/CoachSetup.cleartext.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 696[2mms[22m[39m
+     [33m[2m✓[22m[39m takes plain http:// to a LAN address, and says where it is allowed [33m 392[2mms[22m[39m
+ [32m✓[39m src/components/DeleteAccount.test.jsx [2m([22m[2m14 tests[22m[2m)[22m[33m 827[2mms[22m[39m
+ [32m✓[39m src/views/Settings.accent.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 987[2mms[22m[39m
+ [32m✓[39m src/sheets.day-note.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 823[2mms[22m[39m
+ [32m✓[39m src/sheets.dbload.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 798[2mms[22m[39m
+     [33m[2m✓[22m[39m the detail sheet sets the exercise default, stamped, and shows As entered until then [33m 315[2mms[22m[39m
+ [32m✓[39m src/views/CoachChat.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 510[2mms[22m[39m
+ [32m✓[39m src/views/Workout.session-volume.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 844[2mms[22m[39m
+ [32m✓[39m src/views/Workout.set-note.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 527[2mms[22m[39m
+     [33m[2m✓[22m[39m is written from the set menu and shown under its row [33m 441[2mms[22m[39m
+ [32m✓[39m src/views/week-start.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 555[2mms[22m[39m
+ [32m✓[39m src/components/Nfc.test.jsx [2m([22m[2m16 tests[22m[2m)[22m[33m 349[2mms[22m[39m
+ [32m✓[39m src/views/Workout.edit-empty.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1175[2mms[22m[39m
+     [33m[2m✓[22m[39m asks to delete the workout instead; Keep editing goes back with nothing saved [33m 500[2mms[22m[39m
+ [32m✓[39m src/lib/sync-merge.coach.test.js [2m([22m[2m11 tests[22m[2m)[22m[33m 413[2mms[22m[39m
+     [33m[2m✓[22m[39m matches the app’s mergeCoach and caps [33m 343[2mms[22m[39m
+ [32m✓[39m src/App.workout-tabbar.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1093[2mms[22m[39m
+   [33m[2m✓[22m[39m a running workout has no tab bar and no bottom action; minimized, the tabs and Resume are back [33m 773[2mms[22m[39m
+ [32m✓[39m src/views/Admin.password.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 567[2mms[22m[39m
+ [32m✓[39m src/sheets.config-incline.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 356[2mms[22m[39m
+ [32m✓[39m src/sheets.config-triple.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 416[2mms[22m[39m
+ [32m✓[39m src/sheets.backoff.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 612[2mms[22m[39m
+ [32m✓[39m src/sheets.workout-detail.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 648[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-figure.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 294[2mms[22m[39m
+ [32m✓[39m src/components/Animations.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 362[2mms[22m[39m
+ [32m✓[39m src/views/Workout.stepper.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 363[2mms[22m[39m
+ [32m✓[39m src/components/Challenges.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 495[2mms[22m[39m
+ [32m✓[39m src/lib/coach-local.test.js [2m([22m[2m19 tests[22m[2m)[22m[33m 436[2mms[22m[39m
+ [32m✓[39m src/sheets.import-summary.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 461[2mms[22m[39m
+ [32m✓[39m src/views/Admin.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 338[2mms[22m[39m
+ [32m✓[39m src/sheets.ex-unit.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 697[2mms[22m[39m
+ [32m✓[39m src/views/Measurements.units.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 605[2mms[22m[39m
+ [32m✓[39m src/views/Programmes.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 341[2mms[22m[39m
+ [32m✓[39m src/lib/sw.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 300[2mms[22m[39m
+ [32m✓[39m src/lib/anatomy/ecorche.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 207[2mms[22m[39m
+ [32m✓[39m src/sheets.freestyle-progression.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 395[2mms[22m[39m
+ [32m✓[39m src/store/useStore.quota.test.jsx [2m([22m[2m1 test[22m[2m)[22m[33m 599[2mms[22m[39m
+     [33m[2m✓[22m[39m a restart after a pull that could not be saved merges, and the other device's workouts stay [33m 596[2mms[22m[39m
+ [32m✓[39m src/views/Settings.connstatus.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 498[2mms[22m[39m
+ [32m✓[39m src/views/Settings.app-icon.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 672[2mms[22m[39m
+ [32m✓[39m src/lib/media-ingest.test.js [2m([22m[2m18 tests[22m[2m)[22m[33m 528[2mms[22m[39m
+ [32m✓[39m src/lib/log-workout.test.js [2m([22m[2m39 tests[22m[2m)[22m[33m 525[2mms[22m[39m
+ [32m✓[39m src/store/useStore.adopt.test.jsx [2m([22m[2m19 tests[22m[2m)[22m[33m 624[2mms[22m[39m
+ [32m✓[39m src/lib/failure-sets.test.js [2m([22m[2m17 tests[22m[2m)[22m[33m 721[2mms[22m[39m
+     [33m[2m✓[22m[39m from a CSV set type [33m 458[2mms[22m[39m
+ [32m✓[39m src/components/WorkoutSettingsSheet.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1305[2mms[22m[39m
+     [33m[2m✓[22m[39m writes the same fields as Settings [33m 350[2mms[22m[39m
+ [32m✓[39m src/lib/empty-placeholder.test.js [2m([22m[2m1 test[22m[2m)[22m[33m 866[2mms[22m[39m
+     [33m[2m✓[22m[39m are an en dash in every source file [33m 863[2mms[22m[39m
+ [32m✓[39m src/lib/channel.test.js [2m([22m[2m9 tests[22m[2m)[22m[33m 2041[2mms[22m[39m
+     [33m[2m✓[22m[39m the APK from GitHub updates itself [33m 650[2mms[22m[39m
+     [33m[2m✓[22m[39m the APK and the Play build scan with ML Kit [33m 311[2mms[22m[39m
+     [33m[2m✓[22m[39m the gym reminder is there unless the build left background location out [33m 537[2mms[22m[39m
+ [32m✓[39m src/sheets.config-pyramid-weight.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1252[2mms[22m[39m
+     [33m[2m✓[22m[39m shows one weight field per set and saves what was typed [33m 549[2mms[22m[39m
+     [33m[2m✓[22m[39m opens on the saved weights and writes no field when every set is left at 0 [33m 396[2mms[22m[39m
+ [32m✓[39m src/components/BodyMap.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1167[2mms[22m[39m
+     [33m[2m✓[22m[39m activates a muscle once with Enter [33m 453[2mms[22m[39m
+ [32m✓[39m src/lib/structuralBalance.test.js [2m([22m[2m56 tests[22m[2m)[22m[33m 1442[2mms[22m[39m
+     [33m[2m✓[22m[39m a lift exactly at its ratio of the anchor is balanced, at any reps [33m 923[2mms[22m[39m
+     [33m[2m✓[22m[39m a set of exactly the standard is balanced at any body weight, in kg and in lb [33m 389[2mms[22m[39m
+ [32m✓[39m src/lib/scan-web.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 181[2mms[22m[39m
+ [32m✓[39m src/components/LineChart.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[33m 391[2mms[22m[39m
+ [32m✓[39m src/sheets.custom-target.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 999[2mms[22m[39m
+     [33m[2m✓[22m[39m is the primary tapped first, while the stored list keeps the map order [33m 631[2mms[22m[39m
+ [32m✓[39m src/components/MiniBodyMap.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 368[2mms[22m[39m
+ [32m✓[39m src/views/Modules.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 455[2mms[22m[39m
+ [32m✓[39m src/lib/sync-merge.property.test.js [2m([22m[2m7 tests[22m[2m)[22m[33m 3447[2mms[22m[39m
+     [33m[2m✓[22m[39m the order two copies meet in does not matter [33m 570[2mms[22m[39m
+     [33m[2m✓[22m[39m meeting a copy a second time changes nothing [33m 769[2mms[22m[39m
+     [33m[2m✓[22m[39m watch, phone and server end up the same whichever two meet first [33m 1113[2mms[22m[39m
+     [33m[2m✓[22m[39m nothing logged anywhere is lost unless it was deleted after its last edit [33m 418[2mms[22m[39m
+     [33m[2m✓[22m[39m a weigh-in keeps the value entered last for its day, whichever device entered it [33m 309[2mms[22m[39m
+ [32m✓[39m src/components/SyncBanner.test.jsx [2m([22m[2m33 tests[22m[2m)[22m[33m 593[2mms[22m[39m
+ [32m✓[39m src/lib/ex-unit.test.js [2m([22m[2m28 tests[22m[2m)[22m[33m 642[2mms[22m[39m
+     [33m[2m✓[22m[39m every plate-grid weight comes back exactly as typed, both ways [33m 417[2mms[22m[39m
+ [32m✓[39m src/components/Streak.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[32m 232[2mms[22m[39m
+ [32m✓[39m src/lib/plan-engine.multi.test.js [2m([22m[2m6 tests[22m[2m)[22m[33m 362[2mms[22m[39m
+ [32m✓[39m src/views/CheckIn.test.jsx [2m([22m[2m18 tests[22m[2m)[22m[33m 506[2mms[22m[39m
+ [32m✓[39m src/store/useStore.sync.test.jsx [2m([22m[2m24 tests[22m[2m)[22m[32m 217[2mms[22m[39m
+ [32m✓[39m src/views/Stats.lifetime-volume.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 527[2mms[22m[39m
+     [33m[2m✓[22m[39m adds up every session in the profile unit [33m 343[2mms[22m[39m
+ [32m✓[39m src/sheets.dumbbells.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 319[2mms[22m[39m
+ [32m✓[39m src/views/Home.modules.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 517[2mms[22m[39m
+     [33m[2m✓[22m[39m Everything: the weight card, the check-in and the streak are there [32m 300[2mms[22m[39m
+ [32m✓[39m src/sheets.config-typing.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 692[2mms[22m[39m
+     [33m[2m✓[22m[39m lets a drop-set field be emptied and retyped, and saves what was typed [33m 310[2mms[22m[39m
+ [32m✓[39m src/sheets.set-trend.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 215[2mms[22m[39m
+ [32m✓[39m src/views/Workout.speed.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 557[2mms[22m[39m
+ [32m✓[39m src/views/Home.weight-card.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 233[2mms[22m[39m
+ [32m✓[39m src/sheets.library-qa.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 373[2mms[22m[39m
+ [32m✓[39m src/views/Workout.typo.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 546[2mms[22m[39m
+ [32m✓[39m src/sheets.missed-day.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 552[2mms[22m[39m
+ [32m✓[39m src/views/Workout.dumbbells.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 499[2mms[22m[39m
+ [32m✓[39m src/views/CoachChat.fast-failure.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 206[2mms[22m[39m
+ [32m✓[39m src/views/Measurements.unitless.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 271[2mms[22m[39m
+ [32m✓[39m src/components/WorkoutCoachSheet.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 124[2mms[22m[39m
+ [32m✓[39m src/lib/coach-local.schedule.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 177[2mms[22m[39m
+ [32m✓[39m src/components/RestTimer.auto.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[32m 212[2mms[22m[39m
+ [32m✓[39m src/seasonal/halloween.test.jsx [2m([22m[2m13 tests[22m[2m)[22m[33m 327[2mms[22m[39m
+ [32m✓[39m src/views/ProgressPhotos.delete.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 285[2mms[22m[39m
+ [32m✓[39m src/store/useStore.restore.test.jsx [2m([22m[2m20 tests[22m[2m)[22m[33m 345[2mms[22m[39m
+ [32m✓[39m src/lib/import-apps.test.js [2m([22m[2m23 tests[22m[2m)[22m[33m 347[2mms[22m[39m
+ [32m✓[39m src/sheets.history.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 550[2mms[22m[39m
+ [32m✓[39m src/lib/search-popular.test.js [2m([22m[2m4 tests[22m[2m)[22m[33m 597[2mms[22m[39m
+ [32m✓[39m src/views/Stats.modules.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 767[2mms[22m[39m
+     [33m[2m✓[22m[39m Everything: Body and Effort in the index, the weight tile, the streak, the links under Body [33m 381[2mms[22m[39m
+ [32m✓[39m src/sheets.weighin-times.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 667[2mms[22m[39m
+     [33m[2m✓[22m[39m starts on now, and a second weigh-in today joins the first [33m 358[2mms[22m[39m
+ [32m✓[39m src/sheets.workoutview.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 348[2mms[22m[39m
+     [33m[2m✓[22m[39m a backfilled session snapshots it too [33m 315[2mms[22m[39m
+ [32m✓[39m src/sheets.custom-edit.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 758[2mms[22m[39m
+ [32m✓[39m src/lib/media-store-idb.test.js [2m([22m[2m4 tests[22m[2m)[22m[33m 370[2mms[22m[39m
+ [32m✓[39m src/views/Home.week-left.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 651[2mms[22m[39m
+     [33m[2m✓[22m[39m counts the planned days down [33m 349[2mms[22m[39m
+ [32m✓[39m src/sheets.finish-keep-routine.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 622[2mms[22m[39m
+     [33m[2m✓[22m[39m offers it, and one tap adds it with the setup of the session [33m 492[2mms[22m[39m
+ [32m✓[39m src/components/AppIconRow.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 487[2mms[22m[39m
+ [32m✓[39m src/lib/zip.test.js [2m([22m[2m4 tests[22m[2m)[22m[33m 384[2mms[22m[39m
+     [33m[2m✓[22m[39m round-trips names (UTF-8 included) and bytes, and says it is a zip [33m 372[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.add-top.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 699[2mms[22m[39m
+     [33m[2m✓[22m[39m sits above the first exercise, with the list heading [33m 418[2mms[22m[39m
+ [32m✓[39m src/views/Plan.day-rows.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 644[2mms[22m[39m
+     [33m[2m✓[22m[39m a planned day is one row with no buttons of its own; a tap opens the day’s picker [33m 305[2mms[22m[39m
+ [32m✓[39m src/views/Settings.update.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1094[2mms[22m[39m
+ [32m✓[39m src/views/CoachChat.refusal.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 879[2mms[22m[39m
+     [33m[2m✓[22m[39m is a question for the Coach, answered in words, not a review of the whole plan [33m 488[2mms[22m[39m
+ [32m✓[39m src/lib/recovery.test.js [2m([22m[2m55 tests[22m[2m)[22m[33m 976[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps the 8x100x8 ten-day reproduction non-increasing as sessions leave the scan [33m 754[2mms[22m[39m
+ [32m✓[39m src/components/StrengthLevel.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 559[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the level, the ratio and the next step, with the men’s-table hint until sex is set [33m 312[2mms[22m[39m
+ [32m✓[39m src/sheets.config-failure.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1113[2mms[22m[39m
+     [33m[2m✓[22m[39m is off by default and saves nothing then [33m 383[2mms[22m[39m
+ [32m✓[39m src/lib/android-asset-packs.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 295[2mms[22m[39m
+ [32m✓[39m src/sheets.weighin-undo.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 653[2mms[22m[39m
+     [33m[2m✓[22m[39m the log sheet's one-tap delete offers Undo, and Undo puts the weigh-in back [33m 329[2mms[22m[39m
+ [32m✓[39m src/views/Workout.incline.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1097[2mms[22m[39m
+     [33m[2m✓[22m[39m sits after the speed on a treadmill, steps in half percents and stores on the set [33m 609[2mms[22m[39m
+ [32m✓[39m src/views/Settings.nudge.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 999[2mms[22m[39m
+     [33m[2m✓[22m[39m switches on, keeps the reminder as it was, and offers the three tones [33m 305[2mms[22m[39m
+ [32m✓[39m src/components/WeeklySets.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 536[2mms[22m[39m
+ [32m✓[39m src/components/SwipeCards.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[32m 189[2mms[22m[39m
+ [32m✓[39m src/views/Settings.workoutview.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 406[2mms[22m[39m
+     [33m[2m✓[22m[39m offers Cards / List / Compact / Focus and writes workoutView to the store [33m 323[2mms[22m[39m
+ [32m✓[39m src/views/Settings.reset.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 391[2mms[22m[39m
+ [32m✓[39m src/sheets.combine-ui.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 353[2mms[22m[39m
+ [32m✓[39m src/views/Stats.weight-window.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 456[2mms[22m[39m
+ [32m✓[39m src/sheets.effort-picker.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 593[2mms[22m[39m
+ [32m✓[39m src/views/Plan.routine-order.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1036[2mms[22m[39m
+     [33m[2m✓[22m[39m shows no move buttons outside Edit, and the days a routine is on [33m 355[2mms[22m[39m
+ [32m✓[39m src/sheets.session-routine.test.jsx [2m([22m[2m1 test[22m[2m)[22m[33m 342[2mms[22m[39m
+     [33m[2m✓[22m[39m requires an explicit confirmation, then creates a flat routine and keeps history unchanged [33m 338[2mms[22m[39m
+ [32m✓[39m src/views/Settings.themes.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 439[2mms[22m[39m
+ [32m✓[39m src/sheets.config-bw-step.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 450[2mms[22m[39m
+ [32m✓[39m src/sheets.speed.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 190[2mms[22m[39m
+ [32m✓[39m src/components/Modals.test.jsx [2m([22m[2m23 tests[22m[2m)[22m[32m 221[2mms[22m[39m
+ [32m✓[39m src/sheets.aliases.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 498[2mms[22m[39m
+ [32m✓[39m src/sheets.finish-share.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 345[2mms[22m[39m
+ [32m✓[39m src/lib/sync-stamps-parity.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32m✓[39m src/views/Workout.remove.test.jsx [2m([22m[2m13 tests[22m[2m)[22m[33m 508[2mms[22m[39m
+ [32m✓[39m src/views/Home.startdoor.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 405[2mms[22m[39m
+ [32m✓[39m src/views/Workout.set-trend.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 358[2mms[22m[39m
+ [32m✓[39m src/sheets.swap.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 337[2mms[22m[39m
+ [32m✓[39m src/components/WeightRate.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 256[2mms[22m[39m
+ [32m✓[39m src/views/Settings.vibrate-silent.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 160[2mms[22m[39m
+ [32m✓[39m src/sheets.weight-input.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[32m 242[2mms[22m[39m
+ [32m✓[39m src/lib/plan-to-routines.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 145[2mms[22m[39m
+ [32m✓[39m src/components/ui.test.jsx [2m([22m[2m19 tests[22m[2m)[22m[32m 164[2mms[22m[39m
+ [32m✓[39m src/lib/anatomy/normalize.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m src/views/Settings.startfrom.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 174[2mms[22m[39m
+ [32m✓[39m src/views/Settings.logref.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 113[2mms[22m[39m
+ [32m✓[39m src/sheets.config-warmup-volume.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m src/views/Measurements.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 241[2mms[22m[39m
+ [32m✓[39m src/lib/import-effort.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 181[2mms[22m[39m
+ [32m✓[39m src/components/Wrapped.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 408[2mms[22m[39m
+ [32m✓[39m src/components/TabBar.test.jsx [2m([22m[2m14 tests[22m[2m)[22m[32m 221[2mms[22m[39m
+ [32m✓[39m src/views/Home.weight-chart.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 166[2mms[22m[39m
+ [32m✓[39m src/components/RestTimer.dock.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[33m 375[2mms[22m[39m
+ [32m✓[39m src/lib/exercises.clip-ext.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 200[2mms[22m[39m
+ [32m✓[39m src/lib/api.pair-probe.test.js [2m([22m[2m17 tests[22m[2m)[22m[32m 137[2mms[22m[39m
+ [32m✓[39m src/lib/widgets.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 182[2mms[22m[39m
+ [32m✓[39m src/lib/coach.test.js [2m([22m[2m78 tests[22m[2m)[22m[32m 140[2mms[22m[39m
+ [32m✓[39m src/views/CoachChat.settled-elsewhere.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 260[2mms[22m[39m
+ [32m✓[39m src/components/TabBar.navigation.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 256[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.print.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 224[2mms[22m[39m
+ [32m✓[39m src/views/Settings.sound.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[33m 472[2mms[22m[39m
+ [32m✓[39m src/sheets.calendar.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 146[2mms[22m[39m
+ [32m✓[39m src/views/Login.password.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+ [32m✓[39m src/components/ServerSync.leave.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 101[2mms[22m[39m
+ [32m✓[39m src/views/RoutineEdit.progression.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 231[2mms[22m[39m
+ [32m✓[39m src/sheets.progression-row.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 258[2mms[22m[39m
+ [32m✓[39m src/components/TabBar.retap.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[32m 292[2mms[22m[39m
+ [32m✓[39m src/sheets.config-cardio-mode.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 380[2mms[22m[39m
+ [32m✓[39m src/views/Settings.warmup-bars.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 301[2mms[22m[39m
+ [32m✓[39m src/sheets.dayoverride.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[33m 356[2mms[22m[39m
+ [32m✓[39m src/sheets.repeat-workout.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 278[2mms[22m[39m
+ [32m✓[39m src/lib/sound.test.js [2m([22m[2m50 tests[22m[2m)[22m[32m 152[2mms[22m[39m
+ [32m✓[39m src/views/starter-entry.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 204[2mms[22m[39m
+ [32m✓[39m src/lib/sync-merge.test.js [2m([22m[2m85 tests[22m[2m)[22m[32m 112[2mms[22m[39m
+ [32m✓[39m src/views/Settings.tour.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 175[2mms[22m[39m
+ [32m✓[39m src/lib/wakelock.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 215[2mms[22m[39m
+ [32m✓[39m src/components/ReportSheet.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/lib/recovery-hint.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m src/lib/export-csv.test.js [2m([22m[2m22 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m src/views/Settings.schedule.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[32m 213[2mms[22m[39m
+ [32m✓[39m src/sheets.jumping-jacks.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 122[2mms[22m[39m
+ [32m✓[39m src/App.scroll.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 145[2mms[22m[39m
+ [32m✓[39m src/store/useUI.auto-holds.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m src/store/useStore.media.test.jsx [2m([22m[2m11 tests[22m[2m)[22m[32m 192[2mms[22m[39m
+ [32m✓[39m src/lib/plan-print.test.js [2m([22m[2m39 tests[22m[2m)[22m[32m 104[2mms[22m[39m
+ [32m✓[39m src/lib/import-reimport.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m src/color-mix-fallback.test.js [2m([22m[2m22 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m src/lib/gym-places.test.js [2m([22m[2m30 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/components/BackupFolderRow.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 140[2mms[22m[39m
+ [32m✓[39m src/lib/wrapped-cards.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 204[2mms[22m[39m
+ [32m✓[39m src/store/useStore.sync-status.test.jsx [2m([22m[2m26 tests[22m[2m)[22m[33m 431[2mms[22m[39m
+ [32m✓[39m src/lib/set-trend.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m src/lib/import-match.test.js [2m([22m[2m43 tests[22m[2m)[22m[32m 180[2mms[22m[39m
+ [32m✓[39m src/lib/anim-data-safety.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 111[2mms[22m[39m
+ [32m✓[39m src/lib/challenges.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 174[2mms[22m[39m
+ [32m✓[39m src/views/Stats.speed.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 279[2mms[22m[39m
+ [32m✓[39m src/sheets.stack.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 234[2mms[22m[39m
+ [32m✓[39m src/views/MobileOnboarding.ios-keyboard.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 216[2mms[22m[39m
+ [32m✓[39m src/components/Recap.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 221[2mms[22m[39m
+ [32m✓[39m src/lib/session-note.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 204[2mms[22m[39m
+ [32m✓[39m src/views/Settings.gifsize.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 189[2mms[22m[39m
+ [32m✓[39m src/lib/workout-text.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 104[2mms[22m[39m
+ [32m✓[39m src/views/Settings.backupfolder.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 240[2mms[22m[39m
+ [32m✓[39m src/sheets.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 295[2mms[22m[39m
+ [32m✓[39m src/views/Settings.volume-warmups.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 197[2mms[22m[39m
+ [32m✓[39m src/lib/programmes.test.js [2m([22m[2m62 tests[22m[2m)[22m[32m 134[2mms[22m[39m
+ [32m✓[39m src/components/CoachConsentSheet.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 190[2mms[22m[39m
+ [32m✓[39m src/views/Anatomy.training.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 384[2mms[22m[39m
+ [32m✓[39m src/views/ProgressPhotos.compare.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m src/lib/report.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m src/lib/set-videos.test.js [2m([22m[2m19 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m src/lib/notes-render.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m src/lib/workout-card.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m src/lib/print-pictures.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 123[2mms[22m[39m
+ [32m✓[39m src/sheets.finish-hold.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 111[2mms[22m[39m
+ [32m✓[39m src/sheets.day-assign.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m src/views/Login.lost-access.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 85[2mms[22m[39m
+ [32m✓[39m src/components/CsvExportSheet.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m src/views/PermissionSteps.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m src/views/Settings.push.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m src/lib/incline.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+ [32m✓[39m src/lib/api.media.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 137[2mms[22m[39m
+ [32m✓[39m src/design-review.test.js [2m([22m[2m30 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m src/lib/sha256.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/lib/coach-demo.test.js [2m([22m[2m36 tests[22m[2m)[22m[32m 116[2mms[22m[39m
+ [32m✓[39m src/lib/import-csv.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 124[2mms[22m[39m
+ [32m✓[39m src/views/AdminCoach.config.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 133[2mms[22m[39m
+ [32m✓[39m src/components/ScrollTopButton.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[32m 125[2mms[22m[39m
+ [32m✓[39m src/views/Settings.speed.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 183[2mms[22m[39m
+ [32m✓[39m src/lib/history.test.js [2m([22m[2m184 tests[22m[2m)[22m[32m 178[2mms[22m[39m
+ [32m✓[39m src/store/useUI.native-rest.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m src/components/ServerSync.media.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[32m 145[2mms[22m[39m
+ [32m✓[39m src/views/CoachChat.demo-failure.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 198[2mms[22m[39m
+ [32m✓[39m src/lib/import-csv.twice.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 119[2mms[22m[39m
+ [32m✓[39m src/lib/routine-link.test.js [2m([22m[2m22 tests[22m[2m)[22m[32m 138[2mms[22m[39m
+ [32m✓[39m src/store/useUI.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32m✓[39m src/components/Modals.back.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 109[2mms[22m[39m
+ [32m✓[39m src/lib/rename-workout.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 124[2mms[22m[39m
+ [32m✓[39m src/store/useStore.import-restore.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 120[2mms[22m[39m
+ [32m✓[39m src/sheets.menu-sections.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 138[2mms[22m[39m
+ [32m✓[39m src/store/useStore.rev-rewind.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 105[2mms[22m[39m
+ [32m✓[39m src/views/MobileOnboarding.cf-access.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 109[2mms[22m[39m
+ [32m✓[39m src/lib/week-start.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 115[2mms[22m[39m
+ [32m✓[39m src/lib/voice.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 115[2mms[22m[39m
+ [32m✓[39m src/sheets.workout-edit-exit.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/lib/native-keyboard.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m src/lib/session-start.plan.test.js [2m([22m[2m48 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m src/lib/assisted.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/lib/dumbbells.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m src/views/MobileOnboarding.connect-error.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m src/lib/measurements-csv.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/lib/agent/history.test.js [2m([22m[2m19 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m scripts/check-mobile-bundle.test.mjs [2m([22m[2m5 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/components/PrintPlanSheet.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/lib/format-ago.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m src/lib/live-activity.test.js [2m([22m[2m29 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+ [32m✓[39m src/views/undo-concurrent.test.jsx [2m([22m[2m9 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m src/lib/jumping-jacks.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m src/components/RecoveryHint.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m src/components/StatBars.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 113[2mms[22m[39m
+ [32m✓[39m src/components/RestTimer.ready.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 214[2mms[22m[39m
+ [32m✓[39m src/lib/progression.triple.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 150[2mms[22m[39m
+ [32m✓[39m src/lib/workout-media.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m src/lib/update.install.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 93[2mms[22m[39m
+ [32m✓[39m src/lib/media-prefetch.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 119[2mms[22m[39m
+ [32m✓[39m src/views/Login.device-link.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 143[2mms[22m[39m
+ [32m✓[39m src/components/ChatInput.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 113[2mms[22m[39m
+ [32m✓[39m src/views/Plan.routine-count.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/lib/speed.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m src/views/Stats.exercise-time.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m src/components/Media.preview.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m src/lib/gym-reminder.test.js [2m([22m[2m24 tests[22m[2m)[22m[32m 85[2mms[22m[39m
+ [32m✓[39m src/store/useStore.plan-sync.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 95[2mms[22m[39m
+ [32m✓[39m src/lib/recovery-view.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m src/sheets.plan-import-toast.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m src/lib/locale-sv.test.js [2m([22m[2m21 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-merge.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m src/components/WorkoutScrollAnchor.test.jsx [2m([22m[2m10 tests[22m[2m)[22m[32m 126[2mms[22m[39m
+ [32m✓[39m src/lib/edge-swipe-back.test.js [2m([22m[2m22 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32m✓[39m src/store/useStore.config.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m src/lib/weight-decimals.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/lib/session-routines.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-muscle-batch-2.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/boot-watchdog.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/lib/progression.test.js [2m([22m[2m129 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/lib/volume-warmups.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m src/components/SwipeRow.layout.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m src/lib/api.test.js [2m([22m[2m19 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m src/lib/plan-share.test.js [2m([22m[2m39 tests[22m[2m)[22m[32m 100[2mms[22m[39m
+ [32m✓[39m src/lib/unilateral-integration.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/lib/onerm.test.js [2m([22m[2m54 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m src/lib/i18n-details-retry.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m src/lib/device-auth.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 76[2mms[22m[39m
+ [32m✓[39m src/components/Media.thumb.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m src/store/useStore.balance-sync.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 73[2mms[22m[39m
+ [32m✓[39m src/lib/tour.test.js [2m([22m[2m28 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/media-store.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/sheets.plan-session.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m src/lib/machine-stack.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/audit.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m src/lib/weigh-ins.test.js [2m([22m[2m29 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m src/lib/equipment.test.js [2m([22m[2m21 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/lib/push.test.js [2m([22m[2m27 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+ [32m✓[39m src/lib/measurements.test.js [2m([22m[2m19 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m src/lib/format.helpers.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/lib/barcode.test.js [2m([22m[2m24 tests[22m[2m)[22m[32m 60[2mms[22m[39m
+ [32m✓[39m src/lib/strength-exercises.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m src/lib/media-sniff.test.js [2m([22m[2m21 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/lib/gym-inventory.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-muscle-olympic.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m src/lib/print-doc.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/lib/session-edit.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m src/lib/rotation.test.js [2m([22m[2m48 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-muscle-batch-1.test.js [2m([22m[2m22 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+ [32m✓[39m src/lib/media-refs.test.js [2m([22m[2m51 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m src/components/Media.clip-memory.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/small-fixes.data-safety.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m src/lib/sync-routine-order.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/lib/demoSeed.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m src/store/useStore.unit-sync.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m src/store/useStore.signin-safety.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/lib/muscles.test.js [2m([22m[2m38 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m src/lib/coach-adapt.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/store/useUI.pause.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/i18n-packs-parallel.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m src/lib/sw-subpath.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m src/store/useStore.import-check.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m src/components/CustomMediaField.offline.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/list-columns.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-history.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m src/lib/session-start.test.js [2m([22m[2m24 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/lib/coach-cleartext.test.js [2m([22m[2m27 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m src/lib/pyramid.test.js [2m([22m[2m42 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m src/lib/rest-off.data-safety.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/lib/coach-api.schedule.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/warmup-ramp.test.js [2m([22m[2m29 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/a11y-contrast-transparency.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/lib/warmup-invariants.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m src/lib/finish-workout.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m src/lib/catalogue-continuity.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m src/store/useUI.rest-alert.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m src/store/useUI.work-reload.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/coach-api.consent.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/lib/coach-parity.test.js [2m([22m[2m171 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m src/lib/spoken-cues.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m src/lib/session-start.last-from.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m src/store/persistence.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/lib/plates.test.js [2m([22m[2m38 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/locale-coverage.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m src/lib/hchips.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/media-limits.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/views/Plan.undo-sync.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m src/lib/api-base.test.js [2m([22m[2m48 tests[22m[2m | [22m[33m11 skipped[39m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/lib/page-motion.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m src/lib/cf-access.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m src/store/useStore.gymcards.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/lib/day-notes.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m src/lib/anim-packs.test.js [2m([22m[2m17 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m src/lib/effort.test.js [2m([22m[2m40 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/store/useStore.reset-sync.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m src/lib/bar-defaults.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m src/lib/queue.test.js [2m([22m[2m38 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m src/lib/routines.replace.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/backoff.test.js [2m([22m[2m28 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m src/lib/media-ingest.probe.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m src/lib/relative-strength.test.js [2m([22m[2m30 tests[22m[2m)[22m[32m 154[2mms[22m[39m
+ [32m✓[39m src/lib/streak.test.js [2m([22m[2m23 tests[22m[2m)[22m[32m 265[2mms[22m[39m
+ [32m✓[39m src/lib/sw-lazy.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 242[2mms[22m[39m
+ [32m✓[39m src/lib/supersetFlow.test.js [2m([22m[2m50 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m src/lib/bw-load.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m src/lib/sync-legacy.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 94[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 169[2mms[22m[39m
+ [32m✓[39m src/lib/session-repeat.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 231[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-aliases.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m src/lib/agent/settings.test.js [2m([22m[2m27 tests[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m src/lib/recap.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 143[2mms[22m[39m
+ [32m✓[39m src/lib/day-photos.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 105[2mms[22m[39m
+ [32m✓[39m src/lib/wrapped.test.js [2m([22m[2m28 tests[22m[2m)[22m[32m 131[2mms[22m[39m
+ [32m✓[39m src/lib/dumbbell-inventory.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+ [32m✓[39m src/store/useUI.silent-buzz.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 82[2mms[22m[39m
+ [32m✓[39m src/store/useStore.draft.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/store/useStore.default-lang.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m src/lib/agent/store-integration.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 80[2mms[22m[39m
+ [32m✓[39m src/store/useStore.account-delete.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m src/store/useUI.toast.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m src/lib/advent.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/finish-compare.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.autobackup.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 98[2mms[22m[39m
+ [32m✓[39m src/lib/workout-date.test.js [2m([22m[2m38 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/sheets.combine.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/lib/routines.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m src/lib/nudge.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/store/useStore.stash-unit.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m src/lib/auto-holds.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/lib/programmes.sync.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/lib/session-start.warmups.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/update.test.js [2m([22m[2m34 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.backupfolder.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/lib/strength-level.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/lib/routines.warmup-rows.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m src/lib/widget-links.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/store/useUI.rest-kill.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m src/lib/viewport-guard.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/lib/nudge-check.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m src/lib/units.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/workout-model.test.js [2m([22m[2m48 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m src/lib/coach-consent.test.js [2m([22m[2m31 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m src/lib/bodyweight-rate.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m src/lib/sw-offline-launch.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32m✓[39m src/lib/import-csv.strong.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m src/lib/import-bodyweight.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m src/lib/nfc-tags.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m src/lib/routines.update.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m src/lib/per-set.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 95[2mms[22m[39m
+ [32m✓[39m src/lib/workout-keys.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/lib/bodyweight.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m src/lib/api.pair-http.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m src/lib/session-merge.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m src/lib/check-ins.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/store/useStore.kept-copy.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/lib/sync-modules.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/lib/backfill.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/lib/agent/actions.test.js [2m([22m[2m34 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m src/store/useStore.tour-sandbox.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m src/store/useStore.hold-signout.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/rest-alert.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/back.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/store/useUI.rest-reload.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m src/lib/gym-auto.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m src/views/ProgressPhotos.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m src/lib/active-workout-order.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/store/useStore.clock.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/sheets.weighin.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/lib/rest-sounds.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/lib/modules.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/lib/api.mobile.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/lib/history.move-entry.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/routines.undo.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m scripts/check-bundle-syntax.test.mjs [2m([22m[2m8 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/seasonal.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m src/lib/coach-insights.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/lib/nfc.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/lib/exercises.custom.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/format-names.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/lib/muscle-targets.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/views/subscreen-header.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/lib/typo-check.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/lib/cardio-reps.test.js [2m([22m[2m27 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/lib/capacitor-fetch.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/lib/duration.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/installed-app-height.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/lib/routine-backups.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-time.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/lib/mobile.nudge-check.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/views/Stats.cmp-css.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/lib/bar.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m src/lib/device-link.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/lib/drop-label.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m src/lib/progression.extra-sets.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/views/Stats.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/lib/week-left.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/lib/back.native.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m src/lib/catalogue-defaults.existing.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/lib/session-noprog.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m src/store/useStore.weighin-default.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/lib/catalogue-browse.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m src/lib/progression.default.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/lib/modules-copy.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m src/lib/default-lang.effective.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/lib/use-sheet-keyboard.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m src/lib/nav.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m src/lib/csp.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m src/lib/history.copy-row.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m src/lib/import-csv.gymmane.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/lib/use-swipe-row.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m src/lib/session-routines.additions.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/lib/youtube.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/android-system-bars.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/lib/active-exercise-swap.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/lib/coach-api.joberror.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/warmup-seed.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/coach-secrets.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-alias-ids.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m src/lib/i18n-details-lang.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/import-name-bodypart.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/store/useStore.device-link.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/lib/android-backup.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/views/CoachSetup.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/accent-swatch.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/qr.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/coach-context.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/favourites.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/lib/muscles.session.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/lib/speech.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/sheets.detail-tags.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/components/Media.autoplay.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/lib/remote.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/structuralBalance-view.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/workout-header-wrap.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/exercise-chips.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/state-json.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/views/MobileOnboarding.http.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/lib/rep-range.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/set-notes.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/scan.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/App.no-tabs.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/lib/recovery.cardio-rpe.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/exif-date.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/sheets.add-device-data.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/superset-meta.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/default-lang.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/home-today-narrow.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/boot.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/superset-side-effort.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/guest.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/lib/muscle-order.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/viewport-zoom.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/bar-nobar.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/components/GymMap.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/progression-copy.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/apk-variant.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/menu-items.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/equipment-extra.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/sync-changes.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/test-setup.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/locale-plate-load.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/segmented-height.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/lib/recap-card.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/components/Toast.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/views/FocusView.layout.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m629 passed[39m[22m[90m (630)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m7506 passed[39m[22m[2m | [22m[33m12 skipped[39m[90m (7519)[39m
+[2m   Start at [22m 16:32:36
+[2m   Duration [22m 189.63s[2m (transform 553.52s, setup 1806.83s, import 1047.26s, tests 634.99s, environment 1603.51s)[22m
+

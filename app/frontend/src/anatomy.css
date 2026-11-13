@@ -1,0 +1,242 @@
+/* yuan-Gym — anatomy screen.
+   The 3D stage is deliberately dark in both themes: it reads as a viewport, and the
+   hologram skin only works against darkness. Everything around it uses the app's tokens. */
+
+.ana-hdr { display: flex; align-items: flex-end; gap: 10px; }
+.ana-hdr h1 { margin: 0; }
+
+.ana-stage {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 50% 0%, #16305c 0%, #0a1224 45%, #05070f 100%);
+  box-shadow: 0 18px 44px -22px rgba(6, 12, 28, .85), inset 0 1px 0 rgba(255, 255, 255, .06);
+  isolation: isolate;
+}
+.ana-stage::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(90, 150, 255, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 150, 255, .07) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(80% 70% at 50% 45%, #000 30%, transparent 78%);
+  pointer-events: none;
+}
+.ana-stage::after {
+  content: '';
+  position: absolute; left: 50%; bottom: 6%;
+  width: 46%; height: 8%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(73, 216, 255, .22), transparent 72%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.model3d { width: 100%; height: 100%; }
+.model3d canvas { border-radius: inherit; }
+.model3d-hint {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  padding: 5px 12px; border-radius: 999px;
+  background: rgba(8, 14, 28, .78);
+  color: #bfe8ff; font-size: var(--fs-caption); letter-spacing: .02em;
+  border: 1px solid rgba(90, 160, 255, .28);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.model3d-fallback {
+  display: grid; place-items: center; height: 100%; padding: 24px; text-align: center;
+  color: #c8d8f0; font-size: var(--fs-footnote);
+}
+/* While the body is being decoded (a 6.7 MB inflate on first open). */
+.model3d-wait {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  color: #8fb6dd; font-size: var(--fs-footnote); letter-spacing: .04em;
+  pointer-events: none;
+}
+
+.ana-stagewrap { position: relative; height: min(70vh, 600px); }
+@media (min-width: 900px) { .ana-stagewrap { height: min(74vh, 720px); } }
+
+/* The chart's two figures stand side by side, so the stage grows a little taller to
+   give each of them room to read. */
+.ana-stagewrap.pair { height: min(76vh, 660px); }
+@media (min-width: 900px) { .ana-stagewrap.pair { height: min(80vh, 780px); } }
+
+/* layer + depth controls, floating over the stage */
+.ana-ctrl {
+  position: absolute; z-index: 2; display: flex; gap: 6px; flex-wrap: wrap;
+}
+.ana-ctrl.top { top: 12px; left: 12px; right: 12px; justify-content: space-between; }
+.ana-ctrl.top2 { top: 50px; left: 12px; right: 12px; justify-content: flex-start; }
+.ana-ctrl.bottom { bottom: 12px; left: 12px; right: 12px; align-items: center; flex-wrap: wrap; row-gap: 6px; }
+
+/* The view switch: 全身 / 前视图 / 后视图 / 前后对照 */
+.ana-views {
+  display: inline-flex; gap: 2px; padding: 3px;
+  border-radius: 999px;
+  background: rgba(10, 18, 34, .72);
+  border: 1px solid rgba(96, 156, 240, .26);
+  backdrop-filter: blur(8px);
+}
+.ana-views .ana-pill { height: 24px; border: none; background: transparent; }
+.ana-views .ana-pill[aria-pressed='true'] {
+  background: linear-gradient(180deg, rgba(73, 216, 255, .26), rgba(47, 111, 208, .30));
+  box-shadow: 0 0 0 1px rgba(73, 216, 255, .18);
+}
+
+/* Which side of the body a muscle belongs to, shown beside its name. */
+.ana-face {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 15px; height: 15px; margin-inline-end: 5px;
+  border-radius: 4px; flex: none;
+  font-size: 9px; font-style: normal; font-weight: 700; line-height: 1;
+  letter-spacing: 0;
+}
+.ana-face.f { background: rgba(73, 216, 255, .16); color: #7fdcf0; }
+.ana-face.b { background: rgba(160, 120, 255, .16); color: #b39aff; }
+.chip.on .ana-face { box-shadow: 0 0 0 1px rgba(255, 255, 255, .55); }
+
+.ana-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  height: 28px; padding: 0 10px; white-space: nowrap; border-radius: 999px;
+  font-size: var(--fs-caption); font-weight: 600;
+  color: #cfe4ff;
+  background: rgba(10, 18, 34, .72);
+  border: 1px solid rgba(96, 156, 240, .26);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, color .16s ease, transform .12s ease;
+}
+.ana-pill:hover { background: rgba(22, 38, 66, .85); }
+.ana-pill:active { transform: scale(.97); }
+.ana-pill[aria-pressed='true'] {
+  background: linear-gradient(180deg, rgba(73, 216, 255, .26), rgba(47, 111, 208, .30));
+  border-color: rgba(73, 216, 255, .62);
+  color: #eaf8ff;
+  box-shadow: 0 0 0 1px rgba(73, 216, 255, .18), 0 6px 18px -8px rgba(73, 216, 255, .6);
+}
+
+.ana-slider {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(10, 18, 34, .72);
+  border: 1px solid rgba(96, 156, 240, .26);
+  backdrop-filter: blur(8px);
+  color: #bcd6f6; font-size: var(--fs-caption);
+}
+.ana-slider input[type='range'] {
+  -webkit-appearance: none; appearance: none;
+  width: 84px; height: 3px; border-radius: 3px;
+  background: linear-gradient(90deg, #49d8ff, #2f6fd0);
+  outline: none;
+}
+.ana-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 15px; height: 15px; border-radius: 50%;
+  background: #eaf8ff; border: 2px solid #49d8ff; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+.ana-legend {
+  position: absolute; z-index: 2; right: 12px; bottom: 52px;
+  display: flex; flex-direction: column; gap: 4px; align-items: flex-end;
+  font-size: 10px; color: #9fc2e8; pointer-events: none;
+}
+.ana-legend i {
+  display: block; height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, #1d2b52, #2b4b8f, #2f6fd0, #39a0e0);
+}
+
+/* --- selected muscle card --- */
+.ana-muscle-card {
+  margin-top: 14px;
+  border-radius: 20px;
+  padding: 16px 16px 6px;
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+  box-shadow: 0 10px 30px -24px rgba(10, 20, 40, .6);
+}
+.ana-muscle-top { display: flex; align-items: flex-start; gap: 12px; }
+.ana-muscle-name { font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
+.ana-muscle-action { color: var(--text-dim); font-size: var(--fs-footnote); margin-top: 3px; }
+.ana-facts { display: grid; gap: 10px; margin: 14px 0 6px; }
+.ana-fact {
+  display: grid; grid-template-columns: 22px 1fr; gap: 10px;
+  font-size: var(--fs-footnote); line-height: 1.65;
+}
+.ana-fact b { display: block; font-size: var(--fs-caption); color: var(--text-dim); font-weight: 600; margin-bottom: 2px; }
+.ana-fact .ico { color: var(--accent); padding-top: 2px; }
+
+.ana-ex { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid var(--outline-variant); }
+.ana-ex:first-of-type { border-top: none; }
+.ana-ex-main { flex: 1; min-width: 0; }
+.ana-ex-name { font-weight: 600; font-size: var(--fs-body); }
+.ana-ex-meta { font-size: var(--fs-caption); color: var(--text-dim); margin-top: 2px; }
+.ana-stars { color: var(--accent); font-size: var(--fs-caption); letter-spacing: 1px; white-space: nowrap; }
+
+.ana-detail { padding: 4px 0 12px; }
+.ana-detail h5 { margin: 12px 0 6px; font-size: var(--fs-caption); color: var(--text-dim); font-weight: 700; letter-spacing: .04em; }
+.ana-detail ol, .ana-detail ul { margin: 0; padding-inline-start: 18px; }
+.ana-detail li { font-size: var(--fs-footnote); line-height: 1.7; margin-bottom: 3px; }
+.ana-callout {
+  display: grid; grid-template-columns: 20px 1fr; gap: 8px;
+  padding: 10px 12px; border-radius: 12px; font-size: var(--fs-footnote); line-height: 1.65;
+  background: var(--surface-variant);
+}
+.ana-callout.warn { background: color-mix(in oklab, var(--red, #e5484d) 12%, var(--surface)); }
+.ana-callout .ico { padding-top: 1px; }
+
+.ana-involve { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ana-tag {
+  font-size: var(--fs-caption); padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--outline-variant); color: var(--text-dim);
+}
+.ana-tag.primary { border-color: color-mix(in oklab, var(--accent) 55%, transparent); color: var(--accent); font-weight: 600; }
+
+/* Which of the picked parts a multi-select recommendation actually trains. Sits under the
+   exercise name so the "why is this here" question answers itself. */
+.ana-cover { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.ana-cover .ana-tag { font-size: 11px; padding: 1px 7px; }
+
+.ana-empty {
+  text-align: center; color: var(--text-dim); font-size: var(--fs-footnote);
+  padding: 22px 12px;
+}
+.ana-muscle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; margin-top: 10px; }
+
+@media (min-width: 980px) {
+  .ana-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr); gap: 20px; align-items: start; }
+  .ana-muscle-card { margin-top: 0; position: sticky; top: 12px; max-height: calc(100vh - 40px); overflow: auto; }
+  .ana-stagewrap { height: min(78vh, 760px); }
+}
+
+/* 第三方模型署名（CC BY 4.0 要求） */
+.ana-attribution { margin: 10px 2px 6px; font-size: 11px; line-height: 1.55; color: var(--muted, #8ba0bd); opacity: .8; }
+
+/* 锻炼前 / 后 并排对比：两具人体上方的标签 */
+.ana-pair-labels {
+  position: absolute; z-index: 2; top: 86px; left: 0; right: 0;
+  display: flex; justify-content: space-around; pointer-events: none;
+  font-size: var(--fs-caption); font-weight: 700; letter-spacing: .02em;
+}
+.ana-pair-labels span {
+  padding: 4px 12px; border-radius: 999px; color: #d5ecff;
+  background: rgba(10, 18, 34, .78); border: 1px solid rgba(96, 156, 240, .3);
+  backdrop-filter: blur(8px); white-space: nowrap;
+}
+.ana-pair-labels span:last-child { color: #b6f2d0; border-color: rgba(96, 220, 160, .38); }
+
+/* 锻炼效果滑块：稍宽一点，强调它是主要操作 */
+.ana-gain { border-color: rgba(73, 216, 255, .4); }
+.ana-gain input[type='range'] { width: 120px; }
+.ana-gain-label { font-weight: 700; color: #cfe4ff; white-space: nowrap; }
+
+/* Safari before 16.2 has no color-mix(): the warning callout takes a surface and the primary tag
+   its accent. Kept in sync with the rules above. */
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+  .ana-callout.warn { background: var(--surface-2) }
+  .ana-tag.primary { border-color: var(--accent) }
+}

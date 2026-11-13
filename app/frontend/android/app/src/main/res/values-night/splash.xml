@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark phone (or dark mode on): the app's own page colour, the same #0c0e12 the boot
+         screen paints. -->
+    <color name="splash_bg">#0C0E12</color>
+</resources>

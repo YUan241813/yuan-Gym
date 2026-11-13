@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android Auto Backup up to Android 11 (API 30): what the cloud backup takes of the app.
+     Everything, as before, except the local copies of the photos and videos of custom exercises
+     (src/lib/media-store-fs.js, Directory.Library, which is the files directory). Auto Backup
+     skips an app's WHOLE backup once it passes 25 MB, and a few videos would take the state
+     mirror (yuan-gym-state.json) down with them. A paired phone gets the files back from its
+     server; a phone in local mode keeps them in the zip export.
+     The pairing (yuan-gym-remote.json) stays out as well: it holds the session token for the
+     server, and a backup is no place for a credential. A restored phone pairs again.
+     The gym reminder's places (opengym_gym_reminder.xml, #614) never leave the phone.
+     The app wrote opengym-media/ and opengym-remote.json before it was yuan-Gym (up to 1.4.7);
+     both spellings stay excluded, so an upgraded phone's old copies stay out of the backup too. -->
+<full-backup-content>
+    <exclude domain="file" path="yuan-gym-media/" />
+    <exclude domain="file" path="opengym-media/" />
+    <exclude domain="file" path="yuan-gym-remote.json" />
+    <exclude domain="file" path="opengym-remote.json" />
+    <exclude domain="sharedpref" path="opengym_gym_reminder.xml" />
+</full-backup-content>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yuan-Gym · 账号管理台</title>
+<style>
+  :root {
+    --bg:#070b14; --panel:#0e1526; --panel-2:#131c30; --line:#1e2b45;
+    --text:#e8eefb; --dim:#8ea3c4; --accent:#3b7bf5; --accent-2:#49d8ff;
+    --good:#39d98a; --warn:#f5a524; --bad:#ff5c5c;
+    --r:14px;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; }
+  body {
+    background:
+      radial-gradient(1100px 600px at 12% -10%, #142850 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #0e2b4a 0%, transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font:15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1180px; margin:0 auto; padding:26px 20px 60px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+  .logo {
+    width:42px; height:42px; border-radius:12px; flex:none;
+    background:linear-gradient(145deg, #3b7bf5, #49d8ff);
+    display:grid; place-items:center; font-weight:800; color:#04101f; font-size:17px;
+    box-shadow:0 10px 26px -12px rgba(59,123,245,.9);
+  }
+  h1 { font-size:19px; margin:0; letter-spacing:.01em; }
+  .sub { color:var(--dim); font-size:12.5px; margin-top:2px; }
+  .spacer { flex:1; }
+  .btn {
+    border:1px solid var(--line); background:var(--panel); color:var(--text);
+    padding:8px 13px; border-radius:10px; font-size:13px; cursor:pointer;
+    transition:.15s ease;
+  }
+  .btn:hover { background:var(--panel-2); border-color:#2b3d61; }
+  .btn.primary { background:linear-gradient(180deg,#3b7bf5,#2c62d0); border-color:#3b7bf5; color:#fff; font-weight:600; }
+  .btn.danger { color:var(--bad); border-color:#472027; }
+  .btn.danger:hover { background:#2a1116; }
+
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:18px; }
+  .card {
+    background:linear-gradient(180deg, rgba(24,36,60,.85), rgba(14,21,38,.9));
+    border:1px solid var(--line); border-radius:var(--r); padding:14px 16px;
+  }
+  .card b { display:block; font-size:26px; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+  .card span { color:var(--dim); font-size:12.5px; }
+
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; }
+  .panel-h { display:flex; align-items:center; gap:10px; padding:13px 16px; border-bottom:1px solid var(--line); }
+  .panel-h h2 { font-size:14px; margin:0; font-weight:600; }
+  .panel-h .dim { color:var(--dim); font-size:12px; }
+  input.search {
+    margin-inline-start:auto; background:#0a1222; border:1px solid var(--line); color:var(--text);
+    padding:7px 11px; border-radius:9px; font-size:13px; width:220px; outline:none;
+  }
+  input.search:focus { border-color:var(--accent); }
+
+  .tblwrap { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { white-space:nowrap; }
+  th { text-align:left; font-weight:600; color:var(--dim); font-size:12px; padding:10px 16px; border-bottom:1px solid var(--line); }
+  td { padding:11px 16px; border-bottom:1px solid rgba(30,43,69,.6); }
+  tbody tr { cursor:pointer; transition:background .12s; }
+  tbody tr:hover { background:#111a2c; }
+  .name { display:flex; align-items:center; gap:9px; }
+  .avatar {
+    width:26px; height:26px; border-radius:8px; flex:none; display:grid; place-items:center;
+    background:linear-gradient(145deg,#20406f,#12305a); color:#9fc6ff; font-size:12px; font-weight:700;
+  }
+  .pill { font-size:11.5px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--dim); }
+  .pill.on { color:var(--good); border-color:#1f4433; background:#0e2418; }
+  .mono { font-variant-numeric:tabular-nums; color:var(--dim); font-size:12.5px; }
+
+  .drawer-mask {
+    position:fixed; inset:0; background:rgba(3,6,12,.6); backdrop-filter:blur(3px);
+    opacity:0; pointer-events:none; transition:.2s;
+  }
+  .drawer-mask.on { opacity:1; pointer-events:auto; }
+  .drawer {
+    position:fixed; top:0; right:0; height:100%; width:min(460px,100%);
+    background:#0b1323; border-left:1px solid var(--line); transform:translateX(100%);
+    transition:transform .26s cubic-bezier(.2,0,0,1); display:flex; flex-direction:column;
+  }
+  .drawer.on { transform:none; }
+  .drawer-h { padding:18px 20px; border-bottom:1px solid var(--line); display:flex; align-items:center; gap:12px; }
+  .drawer-b { padding:16px 20px; overflow:auto; }
+  .kv { display:grid; grid-template-columns:88px 1fr; gap:8px; font-size:13px; margin-bottom:7px; }
+  .kv span { color:var(--dim); }
+  .ev { display:grid; grid-template-columns:64px 1fr; gap:10px; padding:8px 0; border-top:1px solid rgba(30,43,69,.55); font-size:12.5px; }
+  .ev b { color:var(--accent-2); font-weight:600; }
+  .ev span { color:var(--dim); }
+
+  .login { max-width:360px; margin:18vh auto; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:26px; }
+  .login h2 { margin:0 0 6px; font-size:17px; }
+  .login p { color:var(--dim); font-size:13px; margin:0 0 16px; }
+  .login input { width:100%; background:#0a1222; border:1px solid var(--line); color:var(--text); padding:11px 13px; border-radius:10px; font-size:14px; outline:none; margin-bottom:10px; }
+  .login input:focus { border-color:var(--accent); }
+  .err { color:var(--bad); font-size:12.5px; min-height:18px; }
+  .hidden { display:none !important; }
+  .empty { padding:34px; text-align:center; color:var(--dim); font-size:13px; }
+</style>
+</head>
+<body>
+
+<div class="login" id="login">
+  <h2>yuan-Gym 管理台</h2>
+  <p>输入管理密钥（服务端 ADMIN_TOKEN）</p>
+  <input id="tk" type="password" placeholder="Admin token" autocomplete="current-password">
+  <div class="err" id="loginErr"></div>
+  <button class="btn primary" style="width:100%" id="loginGo">进入</button>
+</div>
+
+<div class="wrap hidden" id="app">
+  <header>
+    <div class="logo">Y</div>
+    <div>
+      <h1>账号管理台</h1>
+      <div class="sub">yuan-Gym · 注册用户、活跃与同步记录</div>
+    </div>
+    <div class="spacer"></div>
+    <button class="btn" id="reload">刷新</button>
+    <button class="btn" id="logout">退出</button>
+  </header>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <div class="panel-h">
+      <h2>用户</h2><span class="dim" id="userCount"></span>
+      <input class="search" id="q" placeholder="搜索用户名…">
+    </div>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th>用户</th><th>邮箱</th><th>注册时间</th><th>最近登录</th><th>登录次数</th><th>同步版本</th><th>最近同步</th></tr></thead>
+      <tbody id="users"></tbody>
+    </table>
+    </div>
+    <div class="empty hidden" id="noUsers">还没有人注册</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-h"><h2>使用记录</h2><span class="dim">最近 300 条</span></div>
+    <div class="drawer-b" id="events" style="padding:0 16px 12px"></div>
+  </div>
+</div>
+
+<div class="drawer-mask" id="mask"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-h">
+    <div class="avatar" id="dAvatar">?</div>
+    <div style="flex:1">
+      <div style="font-weight:600" id="dName">—</div>
+      <div class="sub" id="dId"></div>
+    </div>
+    <button class="btn" id="dClose">关闭</button>
+  </div>
+  <div class="drawer-b">
+    <div id="dInfo"></div>
+    <h3 style="font-size:13px;margin:18px 0 8px;color:var(--dim)">该用户的操作</h3>
+    <div id="dEvents"></div>
+    <div style="height:18px"></div>
+    <button class="btn danger" id="dDelete" style="width:100%">删除该账号及其数据</button>
+  </div>
+</aside>
+
+<script>
+const $ = s => document.querySelector(s);
+let TOKEN = localStorage.getItem('yg_admin') || '';
+let USERS = [];
+let EVENTS = [];
+
+const fmt = ts => ts ? new Date(ts).toLocaleString('zh-CN', { hour12: false }) : '—';
+const ago = ts => {
+  if (!ts) return '—';
+  const d = Date.now() - ts;
+  if (d < 60000) return '刚刚';
+  if (d < 3600000) return Math.floor(d / 60000) + ' 分钟前';
+  if (d < 86400000) return Math.floor(d / 3600000) + ' 小时前';
+  return Math.floor(d / 86400000) + ' 天前';
+};
+
+async function api(path) {
+  const r = await fetch(path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(TOKEN));
+  if (r.status === 401) { showLogin('管理密钥无效'); throw new Error('401'); }
+  return r.json();
+}
+
+function showLogin(msg) {
+  $('#app').classList.add('hidden');
+  $('#login').classList.remove('hidden');
+  $('#loginErr').textContent = msg || '';
+}
+
+async function load() {
+  const [ov, us, ev] = await Promise.all([
+    api('/api/admin/overview'), api('/api/admin/users'), api('/api/admin/events?limit=300'),
+  ]);
+  renderCards(ov);
+  USERS = us.users || [];
+  EVENTS = ev.events || [];
+  renderUsers();
+  renderEvents();
+}
+
+function renderCards(o) {
+  const items = [
+    [o.users, '注册用户'], [o.newToday, '今日新增'],
+    [o.activeToday, '今日活跃'], [o.events24h, '24 小时操作'],
+  ];
+  $('#cards').innerHTML = items.map(([v, k]) =>
+    `<div class="card"><b>${v ?? 0}</b><span>${k}</span></div>`).join('');
+}
+
+function renderUsers() {
+  const q = $('#q').value.trim().toLowerCase();
+  const list = USERS.filter(u => !q || u.name.toLowerCase().includes(q));
+  $('#userCount').textContent = `${list.length} / ${USERS.length} 个账号`;
+  $('#noUsers').classList.toggle('hidden', list.length > 0);
+  $('#users').innerHTML = list.map(u => `
+    <tr data-id="${u.id}">
+      <td><div class="name"><div class="avatar">${(u.name || '?').slice(0, 1).toUpperCase()}</div>
+        <div><div>${escapeHtml(u.name)}</div><div class="mono">${u.id}</div></div></div></td>
+      <td class="mono">${escapeHtml(u.email||"—")}</td><td class="mono">${fmt(u.createdAt)}</td>
+      <td class="mono">${u.lastLoginAt ? ago(u.lastLoginAt) : '<span class="pill">未登录</span>'}</td>
+      <td class="mono">${u.logins}</td>
+      <td class="mono">v${u.rev}</td>
+      <td class="mono">${u.updatedAt ? ago(u.updatedAt) : '—'}</td>
+    </tr>`).join('');
+  $('#users').querySelectorAll('tr').forEach(tr => tr.onclick = () => openUser(tr.dataset.id));
+}
+
+function renderEvents() {
+  $('#events').innerHTML = EVENTS.slice(0, 120).map(e => `
+    <div class="ev">
+      <b>${labelOf(e.type)}</b>
+      <div><div>${escapeHtml(e.name || '—')} ${e.meta ? '<span>' + escapeHtml(String(JSON.stringify(e.meta)).slice(0, 80)) + '</span>' : ''}</div>
+      <span>${fmt(e.t)} · ${e.ip || ''}</span></div>
+    </div>`).join('') || '<div class="empty">暂无记录</div>';
+}
+
+const labelOf = t => ({
+  register: '注册', login: '登录', sync_push: '同步写入', sync_pull: '同步读取',
+  sync_conflict: '同步冲突', app: '打开应用',
+  reset_password: '重置密码', verify_code: '发送注册验证码', reset_code: '发送找回验证码', mail_failed: '邮件发送失败',
+}[t] || t);
+
+function openUser(id) {
+  const u = USERS.find(x => x.id === id);
+  if (!u) return;
+  $('#dAvatar').textContent = (u.name || '?').slice(0, 1).toUpperCase();
+  $('#dName').textContent = u.name;
+  $('#dId').textContent = u.id;
+  $('#dInfo').innerHTML = `
+    <div class="kv"><span>邮箱</span><div>${escapeHtml(u.email||"—")}</div></div>
+    <div class="kv"><span>注册时间</span><div>${fmt(u.createdAt)}</div></div>
+    <div class="kv"><span>最近登录</span><div>${fmt(u.lastLoginAt)}</div></div>
+    <div class="kv"><span>登录次数</span><div>${u.logins}</div></div>
+    <div class="kv"><span>同步版本</span><div>v${u.rev}${u.rev ? ' <span class="pill on">已同步</span>' : ''}</div></div>
+    <div class="kv"><span>最近同步</span><div>${fmt(u.updatedAt)}</div></div>`;
+  const mine = EVENTS.filter(e => e.userId === id);
+  $('#dEvents').innerHTML = mine.length ? mine.map(e => `
+    <div class="ev"><b>${labelOf(e.type)}</b><div><span>${fmt(e.t)}</span></div></div>`).join('')
+    : '<div class="empty">这个账号还没有记录</div>';
+  $('#dDelete').onclick = async () => {
+    if (!confirm(`确定删除 ${u.name}？账号与同步数据都会删除，无法恢复。`)) return;
+    await fetch('/api/admin/user/' + id + '?token=' + encodeURIComponent(TOKEN), { method: 'DELETE' });
+    closeDrawer(); load();
+  };
+  $('#mask').classList.add('on');
+  $('#drawer').classList.add('on');
+}
+function closeDrawer() { $('#mask').classList.remove('on'); $('#drawer').classList.remove('on'); }
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+$('#loginGo').onclick = async () => {
+  TOKEN = $('#tk').value.trim();
+  if (!TOKEN) return;
+  try {
+    await load();
+    localStorage.setItem('yg_admin', TOKEN);
+    $('#login').classList.add('hidden');
+    $('#app').classList.remove('hidden');
+  } catch { showLogin('管理密钥无效'); }
+};
+$('#tk').addEventListener('keydown', e => { if (e.key === 'Enter') $('#loginGo').click(); });
+$('#q').oninput = renderUsers;
+$('#reload').onclick = () => load().catch(() => {});
+$('#logout').onclick = () => { localStorage.removeItem('yg_admin'); TOKEN = ''; location.reload(); };
+$('#dClose').onclick = closeDrawer;
+$('#mask').onclick = closeDrawer;
+
+// A token in the address (?token=…) signs in and is then taken out of the address bar, so a
+// link copied from the history does not carry the key.
+const fromUrl = new URLSearchParams(location.search).get('token');
+if (fromUrl) {
+  TOKEN = fromUrl.trim();
+  localStorage.setItem('yg_admin', TOKEN);
+  history.replaceState(null, '', location.pathname);
+}
+
+if (TOKEN) {
+  load().then(() => { $('#login').classList.add('hidden'); $('#app').classList.remove('hidden'); }).catch(() => showLogin('会话过期，请重新输入'));
+} else {
+  $('#login').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

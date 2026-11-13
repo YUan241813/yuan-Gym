@@ -1,0 +1,4 @@
+
+exec:C:\Users\?????AppData\Local\ms-playwright\chromium-1254\chrome-win64\chrome.exe
+--- ms-playwright full ---
+ms-playwright

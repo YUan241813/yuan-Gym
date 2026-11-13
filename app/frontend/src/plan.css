@@ -1,0 +1,77 @@
+/* yuan-Gym — plan + body editor surfaces. */
+
+.plan-note {
+  margin-top: 10px; padding: 10px 12px; border-radius: 12px;
+  background: var(--surface-variant); color: var(--text-dim);
+  font-size: var(--fs-footnote); line-height: 1.65;
+}
+.plan-note.warn {
+  background: color-mix(in oklab, var(--orange, #f5a524) 14%, var(--surface));
+  color: var(--text);
+}
+
+.plan-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 12px; }
+.plan-stats > div {
+  padding: 12px; border-radius: 16px; background: var(--surface);
+  border: 1px solid var(--outline-variant); text-align: center;
+}
+.plan-stats b { display: block; font-size: 22px; letter-spacing: -.02em; }
+.plan-stats span { font-size: var(--fs-caption); color: var(--text-dim); }
+
+.plan-day { margin-bottom: 12px; }
+.plan-day-h { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.plan-day-n {
+  font-size: var(--fs-caption); font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.plan-day-h b { font-size: var(--fs-body); }
+.plan-day-h .dim { margin-inline-start: auto; }
+
+.plan-ex { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-top: 1px solid var(--outline-variant); }
+.plan-ex:first-of-type { border-top: none; }
+.plan-ex-main { flex: 1; min-width: 0; }
+.plan-ex-name { font-weight: 600; font-size: var(--fs-footnote); }
+.plan-ex-meta { font-size: var(--fs-caption); color: var(--text-dim); margin-top: 2px; }
+.plan-ex-pres { font-size: var(--fs-footnote); font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.plan-day-foot { margin-top: 8px; font-size: var(--fs-caption); color: var(--text-dim); }
+
+.plan-bars { display: grid; gap: 7px; }
+.plan-bar { display: grid; grid-template-columns: 62px 1fr 26px; align-items: center; gap: 8px; font-size: var(--fs-caption); }
+.plan-bar i {
+  display: block; height: 8px; border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in oklab, var(--accent) 40%, transparent));
+  min-width: 4px;
+}
+.plan-bar b { text-align: right; font-variant-numeric: tabular-nums; }
+
+.plan-week { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid var(--outline-variant); }
+.plan-week:first-of-type { border-top: none; }
+.plan-week-n { width: 22px; text-align: center; font-weight: 700; color: var(--text-dim); font-size: var(--fs-caption); }
+.plan-vol { display: block; height: 6px; border-radius: 3px; background: var(--surface-variant); }
+.plan-vol i { display: block; height: 100%; border-radius: 3px; background: var(--accent); }
+
+.plan-phase { padding: 12px 0; border-top: 1px solid var(--outline-variant); }
+.plan-phase:first-of-type { border-top: none; }
+.plan-phase-goal {
+  display: inline-block; margin-top: 6px; padding: 2px 9px; border-radius: 999px;
+  font-size: var(--fs-caption); color: var(--accent);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+.ai-text { font-size: var(--fs-footnote); line-height: 1.8; white-space: pre-wrap; }
+
+/* --- body editor --- */
+.body-form { display: grid; gap: 12px; }
+.body-field { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: 12px; }
+.body-field > label { font-size: var(--fs-footnote); color: var(--text-dim); }
+.body-field .input { width: 100%; }
+.body-preview { position: relative; height: 320px; border-radius: 20px; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 0%, #16305c 0%, #0a1224 45%, #05070f 100%); }
+
+/* Safari before 16.2 has no color-mix(): the warning note takes a surface, the bar a flat accent,
+   the phase chip an accent border. Kept in sync with the rules above. */
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+  .plan-note.warn { background: var(--surface-2) }
+  .plan-bar i { background: var(--accent) }
+  .plan-phase-goal { border: 1px solid var(--accent) }
+}

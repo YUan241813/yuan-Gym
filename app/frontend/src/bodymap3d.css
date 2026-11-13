@@ -1,0 +1,12 @@
+/* 「练肌肉」页内联的三维人体：占原来平面示意图的位置，尺寸按手机屏给一个固定舞台高度，
+   别让 three.js 的 canvas 因为没有明确高度而塌成 0。 */
+.bodymap3d { display: block; }
+.bodymap3d-stage {
+  position: relative;
+  height: 320px;
+  border-radius: 18px;
+}
+.bodymap3d-wrap { height: 100%; }
+@media (min-width: 900px) {
+  .bodymap3d-stage { height: 420px; }
+}

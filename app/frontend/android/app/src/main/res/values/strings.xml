@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">yuan-Gym</string>
+    <string name="title_activity_main">yuan-Gym</string>
+    <string name="package_name">ch.duartesantos.opengym</string>
+    <string name="custom_url_scheme">ch.duartesantos.opengym</string>
+    <string name="rest_countdown_channel_name">休息倒计时</string>
+    <string name="rest_channel_name">组间休息</string>
+    <string name="rest_quiet_channel_name">组间休息（不振动）</string>
+    <string name="rest_channel_desc">两组之间的休息计时，显示在通知栏。只有允许锁屏通知时才会出现在锁屏上。</string>
+</resources>

@@ -1,0 +1,57 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90mD:/Self-developedSoftware/yuan-Gym/app/frontend[39m
+
+ [31m❯[39m src/lib/import-apps.test.js [2m([22m[2m23 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 63[2mms[22m[39m
+     [32m✓[39m reads sets, warm-ups, RPE, notes, a timed set and skips the set never done[32m 34[2mms[22m[39m
+     [32m✓[39m reads the workout time on this device’s clock, never shifting the day through UTC[32m 4[2mms[22m[39m
+     [32m✓[39m imports a day once, however often the file comes in[32m 2[2mms[22m[39m
+     [32m✓[39m says it could not read a file with Liftosaur’s header and no readable row[32m 0[2mms[22m[39m
+     [32m✓[39m puts the equipment in front, the default one when the name leaves it out[32m 0[2mms[22m[39m
+     [32m✓[39m maps the names checked by hand, and keeps the near misses the user’s own[32m 0[2mms[22m[39m
+     [32m✓[39m reads history the way the CSV does: same names, units per set, timed sets, unfinished sets left out[32m 4[2mms[22m[39m
+     [32m✓[39m turns week 1 of a planner program into routines and keeps the Liftoscript as notes[32m 4[2mms[22m[39m
+     [32m✓[39m adds routines once, sharing custom exercises with the history[32m 2[2mms[22m[39m
+     [32m✓[39m reads one day of Liftoscript on its own[32m 0[2mms[22m[39m
+     [32m✓[39m reads workouts with their warm-ups, cardio and length, and imports weights as written[32m 1[2mms[22m[39m
+     [32m✓[39m reads routines (presets) from `routines list --format json`[32m 0[2mms[22m[39m
+     [32m✓[39m spreads the set columns into sets, leaves out the ones not done and keeps two workouts of a day apart[32m 1[2mms[22m[39m
+     [32m✓[39m reads an lb export as lb[32m 1[2mms[22m[39m
+     [32m✓[39m fails clearly without set columns[32m 0[2mms[22m[39m
+     [32m✓[39m reads warm-ups, cardio and holds, and keeps the day the phone showed[32m 2[2mms[22m[39m
+     [32m✓[39m reads the support team’s database extract (Android) too[32m 0[2mms[22m[39m
+     [32m✓[39m reads the logs section, sets as weight x reps, times from the session[32m 1[2mms[22m[39m
+     [32m✓[39m keeps the logged day when the session start falls on another one here[32m 0[2mms[22m[39m
+     [32m✓[39m fails clearly when the logs section is not the one described[32m 0[2mms[22m[39m
+     [32m✓[39m leaves the CSVs it already read to the existing reader[32m 1[2mms[22m[39m
+[31m     [31m×[31m never imports a JSON it does not know, and points openGym’s own files to their importers[39m[32m 3[2mms[22m[39m
+     [32m✓[39m points every alias at an exercise that exists[32m 0[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/lib/import-apps.test.js[2m:373:3[22m[2m > [22mtelling files apart[2m > [22mnever imports a JSON it does not know, and points openGym’s own files to their importers
+[31m[1mAssertionError[22m: expected { error: 'yuan-gym' } to deeply equal { error: 'opengym' }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[32m-   "error": "opengym",[39m
+[31m+   "error": "yuan-gym",[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/lib/import-apps.test.js:[2m378:93[22m[39m
+    [90m376|[39m     expect(parseImportFile('{ not json')).toEqual({ error: 'unrecognis…
+    [90m377|[39m     [34mexpect[39m([34mparseImportFile[39m([32m'[]'[39m))[33m.[39m[34mtoEqual[39m({ error[33m:[39m [32m'empty'[39m })
+    [90m378|[39m     expect(parseImportFile(JSON.stringify({ workouts: [], routines: []…
+    [90m   |[39m                                                                                             [31m^[39m
+    [90m379|[39m     expect(parseImportFile(JSON.stringify({ opengym_plan: 1, routines:…
+    [90m380|[39m   })
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m22 passed[39m[22m[90m (23)[39m
+[2m   Start at [22m 19:53:07
+[2m   Duration [22m 2.00s[2m (transform 506ms, setup 507ms, import 1.12s, tests 63ms, environment 0ms)[22m
+

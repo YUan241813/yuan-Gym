@@ -1,0 +1,55 @@
+# yuan-Gym — Cloudflare Worker.
+#
+# One deployment serves the app and its API on https://yuan-gym.yuanzq.top:
+#   · the built front end from ../app/frontend/dist (asset store, long cache, SPA fallback)
+#   · /api/* accounts + sync, in D1
+#   · /ai    the GLM proxy
+#   · /admin the account console (src/admin.html)
+#
+#   npx wrangler deploy
+#   npx wrangler secret put ADMIN_TOKEN     (and SALT_SECRET, GLM_API_KEY, MAIL_PROVIDER, MAIL_KEY, MAIL_FROM)
+
+name = "yuan-gym"
+main = "src/index.js"
+compatibility_date = "2026-11-09"
+account_id = "bf269486c73311a006bb19614d9ce1c3"
+
+# Which origins may call the API with a cookie attached (CORS never uses '*'). The two hosts plus
+# the dev server; null / file:// are the packaged desktop build, whose requests carry no real origin.
+[vars]
+ALLOW_ORIGINS = "https://yuan-gym.yuanzq.top,https://gym.yuanzq.top,http://localhost:5173,http://127.0.0.1:5173,file://,null"
+GLM_MODEL = "glm-4.7-flash"
+
+# The API paths must reach the Worker before the asset router sees them: with the SPA fallback on,
+# anything that is not a file would otherwise be answered with index.html.
+[assets]
+directory = "../app/frontend/dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*", "/ai", "/admin"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yuangym"
+database_id = "4f28a3d4-9ab8-4764-bab6-23d872cd34e4"
+
+# Two names, one Worker (see the routing table in src/index.js):
+#   yuan-gym.yuanzq.top  the app — static files only
+#   api.yuanzq.top       accounts, sync, AI proxy, admin
+#
+# The app host already has a DNS record (a CNAME to the old tunnel), so it is attached as a route:
+# the Worker is matched before the origin, and the record needs no change. The API host is new, so
+# it is a custom domain — deploying creates both its DNS record and its certificate.
+[[routes]]
+pattern = "yuan-gym.yuanzq.top/*"
+zone_name = "yuanzq.top"
+
+[[routes]]
+pattern = "api.yuanzq.top"
+custom_domain = true
+
+# admin.html is imported as text.
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true

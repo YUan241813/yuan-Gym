@@ -1,0 +1,132 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90mD:/Self-developedSoftware/yuan-Gym/app/frontend[39m
+
+ [32m✓[39m src/lib/channel.test.js [2m([22m[2m9 tests[22m[2m)[22m[33m 1162[2mms[22m[39m
+     [33m[2m✓[22m[39m the APK from GitHub updates itself [33m 960[2mms[22m[39m
+[90mstderr[2m | src/exercise-view.test.jsx[2m > [22m[2mexercise list or cards[2m > [22m[2mMuscles page: the results follow the setting, with the button beside their search
+[22m[39mTHREE.WebGLRenderer: Error creating WebGL context.
+
+AggregateError: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7) {
+  code: 'ECONNREFUSED',
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3000
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3000
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3000
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3000
+    }
+  ]
+}
+[90mstderr[2m | src/exercise-view.test.jsx
+[22m[39m[anatomy] 模型加载失败，已回退内置模型： DOMException [NetworkError]: Failed to execute "fetch()" on "Window" with URL "http://localhost:3000/models/ecorche.bin": 
+    at Fetch.onError [90m(file:///D:/Self-developedSoftware/yuan-Gym/app/frontend/[39mnode_modules/[4mhappy-dom[24m/lib/fetch/Fetch.js:540:21[90m)[39m
+[90m    at ClientRequest.emit (node:events:519:28)[39m
+[90m    at emitErrorEvent (node:_http_client:108:11)[39m
+[90m    at Socket.socketErrorListener (node:_http_client:575:5)[39m
+[90m    at Socket.emit (node:events:519:28)[39m
+[90m    at emitErrorNT (node:internal/streams/destroy:170:8)[39m
+[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)[39m
+
+AggregateError: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7) {
+  code: 'ECONNREFUSED',
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3000
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3000
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3000
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3000
+    }
+  ]
+}
+ [31m❯[39m src/exercise-view.test.jsx [2m([22m[2m6 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 360[2mms[22m[39m
+     [32m✓[39m Library: a list until the button beside the search turns the cards on, and back[32m 73[2mms[22m[39m
+     [32m✓[39m reads a profile saved before the setting existed as the list[32m 30[2mms[22m[39m
+     [32m✓[39m keeps "Create your own exercise" a full-width row above the cards[32m 26[2mms[22m[39m
+     [32m✓[39m picker: follows the same setting and switches it beside its own search, by muscle too[32m 173[2mms[22m[39m
+[31m     [31m×[31m Muscles page: the results follow the setting, with the button beside their search[39m[32m 56[2mms[22m[39m
+     [32m✓[39m lays the cards out as a grid over the desktop two-column and the sheet column rules[32m 1[2mms[22m[39m
+ [31m❯[39m scripts/check-bundle-syntax.test.mjs [2m([22m[2m8 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 2915[2mms[22m[39m
+     [32m✓[39m finds a lookbehind, either kind[32m 2[2mms[22m[39m
+     [32m✓[39m leaves lookaheads, named groups and escaped or bracketed look-alikes alone[32m 0[2mms[22m[39m
+     [32m✓[39m finds the v flag, a group name used twice and inline modifiers[32m 0[2mms[22m[39m
+     [32m✓[39m flags a lookbehind in a literal and in a RegExp built from a string[32m 1[2mms[22m[39m
+     [32m✓[39m flags class static blocks, import attributes and built-ins newer than 15.5[32m 0[2mms[22m[39m
+     [32m✓[39m lets through what Safari 15.5 has: at(), Object.hasOwn, structuredClone, ??=, private fields, top-level await[32m 0[2mms[22m[39m
+     [32m✓[39m says so when a chunk does not parse at all[32m 1[2mms[22m[39m
+[31m     [31m×[31m has nothing Safari 15.5, the iOS deployment target, cannot run[39m[33m 2910[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m scripts/check-bundle-syntax.test.mjs[2m > [22mthe built web bundle[2m > [22mhas nothing Safari 15.5, the iOS deployment target, cannot run
+[31m[1mAssertionError[22m: expected [ …(4) ] to deeply equal [][39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- [][39m
+[31m+ [[39m
+[31m+   "assets/three.core-CBRtRF_Z.js:40: AbortSignal.any (newer than Safari 15.5): AbortSignal.any",[39m
+[31m+   "assets/three.core-CBRtRF_Z.js:40: AbortSignal.any (newer than Safari 15.5): AbortSignal.any",[39m
+[31m+   "assets/three.core-CBRtRF_Z.js:40: AbortSignal.any (newer than Safari 15.5): AbortSignal.any",[39m
+[31m+   "assets/three.core-CBRtRF_Z.js:40: AbortSignal.any (newer than Safari 15.5): AbortSignal.any",[39m
+[31m+ ][39m
+
+[36m [2m❯[22m scripts/check-bundle-syntax.test.mjs:[2m57:32[22m[39m
+    [90m 55|[39m       execFileSync(process.execPath, [join(frontend, 'node_modules/vit…
+    [90m 56|[39m         { cwd: frontend, stdio: 'pipe', env: { ...process.env, NODE_EN…
+    [90m 57|[39m       [34mexpect[39m([34mcheckBundle[39m(out))[33m.[39m[34mtoEqual[39m([])
+    [90m   |[39m                                [31m^[39m
+    [90m 58|[39m     } [35mfinally[39m { [34mrmSync[39m(out[33m,[39m { recursive[33m:[39m [35mtrue[39m[33m,[39m force[33m:[39m [35mtrue[39m }) }
+    [90m 59|[39m   }[33m,[39m [34m180_000[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/exercise-view.test.jsx[2m > [22mexercise list or cards[2m > [22mMuscles page: the results follow the setting, with the button beside their search
+[31m[1mTypeError[22m: Cannot read properties of null (reading 'classList')[39m
+[36m [2m❯[22m isCards src/exercise-view.test.jsx:[2m37:52[22m[39m
+    [90m 35|[39m // The button belongs to the search row, next to the field — never in …
+    [90m 36|[39m const besideSearch = btn => btn.parentElement.classList.contains('sear…
+    [90m 37|[39m const isCards = host => host.querySelector('.list').classList.contains…
+    [90m   |[39m                                                    [31m^[39m
+    [90m 38|[39m const pickMuscle = host => act(() => host.querySelector('.chip[aria-pr…
+    [90m 39|[39m const setView = v => useStore.setState(s => ({ S: { ...s.S, exerciseVi…
+[90m [2m❯[22m src/exercise-view.test.jsx:[2m97:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m1 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m21 passed[39m[22m[90m (23)[39m
+[2m   Start at [22m 14:28:20
+[2m   Duration [22m 3.89s[2m (transform 3.17s, setup 1.06s, import 2.84s, tests 4.44s, environment 492ms)[22m
+
+EXIT=1

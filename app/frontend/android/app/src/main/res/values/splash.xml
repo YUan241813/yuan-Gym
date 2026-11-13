@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The window behind the splash screen, before the WebView paints. The app is dark by
+         default but the phone may be in light mode, and the material launch theme fell back to
+         ?android:colorBackground, a cream flash in front of a black boot screen. These two
+         files let the system pick: light phones get the app's light page colour, dark phones its
+         dark one. index.html paints the same two colours for the #boot block. -->
+    <color name="splash_bg">#F2F2F7</color>
+</resources>

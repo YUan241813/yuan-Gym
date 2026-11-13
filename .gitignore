@@ -1,0 +1,138 @@
+# Exercise media downloaded by installs before v1.4.0 (now in catalogue/media); kept ignored so an
+# old folder never gets committed by accident
+media/img/
+media/gif/
+
+# Runtime data — users, passkeys, per-user state, session secret
+data/
+
+# Local config
+.env
+
+# Build output / deps
+frontend/dist/
+node_modules/
+*.log
+.DS_Store
+node_modules
+.claude/
+.agents/
+.superpowers/
+
+# Nix build result symlinks
+result
+result-*
+
+# CI reports (test:* jobs write these next to the suites)
+junit.xml
+coverage/
+test-results.json
+test-results.jsonl
+lcov.info
+/stats/
+frontend/bundle-size.json
+
+# Local planning notes
+docs/superpowers/plans/
+
+# Python and Kotlin build leftovers (scripts/, the Android build)
+__pycache__/
+*.pyc
+.kotlin/
+
+# The maintainer's brand material (logo variants, merch, Buy Me a Coffee covers) sits next to the
+# tracked banner and screenshots but is not part of the repository; keep it out of a `git add -A`
+assets/logo/
+assets/merch/
+assets/tee/
+assets/bmc-cover*
+# scripts/pdf/render-samples.mjs output (npm run pdf:check)
+frontend/pdf-samples/
+
+# Cloudflare fallback build (cloudflare/build.sh)
+/dist/
+.wrangler/
+
+# server secrets (admin token, SMTP password, GLM key)
+server/config.json
+server/data/
+
+# worker secrets: the Cloudflare API token and the Worker's own secret values sat here
+worker/.cf-token
+worker/.secrets.env
+worker/test/.code.sql
+
+# ---------------------------------------------------------------------------
+# Public-repository hygiene (yuan-Gym publishes its Corresponding Source).
+# Everything below is either a build product, a local probe, or an asset that
+# must NOT be redistributed.
+# ---------------------------------------------------------------------------
+
+# Exercise media: licensed from Gym visual, NOT covered by the AGPL — never
+# publish it. The app ships it inside the APK only.
+**/catalogue/media/
+app/frontend/exercise-media/
+**/exercise-media/
+
+# Derived/duplicated trees
+yuan-gym/
+*.apk
+*.aab
+.src.zip
+
+# Brand / design material and personal planning notes
+design/
+MEDIA-REPLACEMENT-*.md
+SELL-OR-CLAIM-*.md
+.screenshots/
+.shots/
+app/frontend/_shots/
+verify-screen.png
+
+# 3D model sources supplied by a third party (input to the generated assets)
+app/frontend/models-src/
+
+# Local render/probe output next to the sources
+app/frontend/.seam-check/
+app/frontend/anatomy-shot.png
+app/frontend/a[0-9].png
+app/frontend/p[0-9].png
+app/frontend/shot-*.png
+
+# Frontend build products and throwaway probe databases
+app/frontend/dist*/
+app/frontend/_dist_prev/
+app/frontend/db3d/
+app/frontend/db4/
+app/frontend/db5/
+app/frontend/db6/
+app/frontend/dbcheck/
+app/frontend/releases/
+app/frontend/node_modules/
+
+# Android: build output, the cap-sync copy of public/ (huge, and it carries
+# the licensed media), signing config and local machine paths
+app/frontend/android/build/
+app/frontend/android/app/build/
+app/frontend/android/.gradle/
+app/frontend/android/local.properties
+app/frontend/android/app/src/main/assets/public/
+app/frontend/android/app/src/main/assets/capacitor.config.json.value
+app/frontend/android/app/release/
+app/frontend/android/.idea/
+
+# iOS: CocoaPods, DerivedData and the cap-sync copy of public/
+app/frontend/ios/App/Pods/
+app/frontend/ios/App/App/public/
+app/frontend/ios/DerivedData/
+app/frontend/ios/App/build/
+app/frontend/ios/App/output/
+app/frontend/ios/App/Podfile.lock
+
+# Gradle / Kotlin caches anywhere
+**/.gradle/
+**/build/
+.gradle/
+gateway-tls.pem
+.github/workflows/
+.git-broken-*/

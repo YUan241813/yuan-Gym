@@ -1,0 +1,15 @@
+goto http://127.0.0.1:5302/anatomy
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5302/anatomy
+Call log:
+[2m  - navigating to "http://127.0.0.1:5302/anatomy", waiting until "domcontentloaded"[22m
+
+    at D:\Self-developedSoftware\yuan-Gym\app\frontend\.shot\shot.mjs:27:12 {
+  name: 'Error'
+}
+
+Node.js v22.22.2
+rc=1

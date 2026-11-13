@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512">
+  <!-- openGym app icon "light", written by scripts/app-icons.mjs.
+       Shipped PNGs are drawn from design/icons/icon-1024.png (the user's own artwork).
+       This file is a placeholder pointer only and is not bundled into the APK. -->
+  <rect width="512" height="512" fill="#ffffff"/>
+</svg>

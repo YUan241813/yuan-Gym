@@ -1,0 +1,19 @@
+{
+  "dist": "D:\\Self-developedSoftware\\yuan-Gym\\app\\frontend\\dist",
+  "stagedStill": 6554,
+  "stagedClip": 6554,
+  "audited": 6554,
+  "needClip": 6554,
+  "haveClip": 6554,
+  "needStill": 6554,
+  "haveStill": 6554,
+  "classes": {
+    "bothClipBothFig": 6554,
+    "clipMaleOnly": 0,
+    "clipFemaleOnly": 0,
+    "noClipEither": 0,
+    "stillBothButNoClip": 0
+  },
+  "figureMismatchIds": [],
+  "noClipIds": []
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<title>anatomy preview</title>
+<style>
+  html, body { margin: 0; background: #070c18; color: #cfe4ff; font: 13px system-ui, sans-serif; }
+  .row { display: flex; gap: 10px; padding: 10px; }
+  .cell { position: relative; background: radial-gradient(120% 80% at 50% 0%, #16305c 0%, #0a1224 45%, #05070f 100%); border-radius: 12px; overflow: hidden; }
+  .cell canvas { display: block; border-radius: 12px; }
+  .lbl { position: absolute; left: 10px; top: 8px; font-weight: 700; color: #9fc2e8; z-index: 2; }
+</style>
+</head>
+<body>
+<div class="row" id="row"></div>
+<script type="module">
+import * as THREE from 'three'
+// Through the seam, so a model dropped into lib/anatomy/custom-body.js shows up here too.
+import { buildBody, preloadAnatomyModel } from '/src/lib/anatomy/index.js'
+
+await preloadAnatomyModel()
+
+const VIEWS = [
+  { key: 'front', label: '前视图', half: 'front', spin: 0 },
+  { key: 'back', label: '后视图', half: 'back', spin: Math.PI },
+  { key: 'all', label: '全身', half: 'all', spin: 0 },
+]
+
+const row = document.getElementById('row')
+const W = 420, H = 660
+
+for (const v of VIEWS) {
+  const cell = document.createElement('div')
+  cell.className = 'cell'
+  cell.style.width = W + 'px'
+  cell.style.height = H + 'px'
+  const lbl = document.createElement('div')
+  lbl.className = 'lbl'
+  lbl.textContent = v.label
+  cell.appendChild(lbl)
+  row.appendChild(cell)
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+  renderer.setPixelRatio(1)
+  renderer.setSize(W, H, false)
+  renderer.domElement.style.width = W + 'px'
+  renderer.domElement.style.height = H + 'px'
+  cell.appendChild(renderer.domElement)
+
+  const scene = new THREE.Scene()
+  scene.fog = new THREE.FogExp2(0x070c18, 0.045)
+  const camera = new THREE.PerspectiveCamera(30, W / H, 0.05, 20)
+  camera.position.set(0, 0.95, 3.6)
+  camera.lookAt(0, 0.95, 0)
+  camera.updateProjectionMatrix()
+
+  scene.add(new THREE.HemisphereLight(0xcfe2ff, 0x141b2c, 1.7))
+  const key = new THREE.DirectionalLight(0xffffff, 3.4)
+  key.position.set(2.4, 3.2, 2.6)
+  scene.add(key)
+  const rim = new THREE.DirectionalLight(0x6fb4ff, 2.4)
+  rim.position.set(-2.6, 1.6, -2.4)
+  scene.add(rim)
+  const under = new THREE.PointLight(0x3f86ff, 14, 7, 2)
+  under.position.set(0, -0.4, 1.2)
+  scene.add(under)
+
+  const built = buildBody({ profile: {}, gender: 'male', half: v.half })
+  built.group.rotation.y = v.spin
+  scene.add(built.group)
+
+  // The bounding box of what was actually built, so a framing mistake is visible.
+  const box = new THREE.Box3().setFromObject(built.group)
+  const helper = new THREE.Box3Helper(box, 0x49d8ff)
+  scene.add(helper)
+
+  const skinMat = built.materials.skin
+  skinMat.opacity = 0.05 + 0.55 * 0.22
+  skinMat.visible = true
+  skinMat.depthWrite = false
+  built.skin.visible = true
+  built.bones.visible = true
+
+  renderer.render(scene, camera)
+  requestAnimationFrame(() => {
+    renderer.render(scene, camera)
+    window.__anatomyReady = true
+  })
+}
+</script>
+</body>
+</html>

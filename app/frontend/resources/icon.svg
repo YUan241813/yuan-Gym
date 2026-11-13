@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512">
+  <!-- Deprecated 2026-11-10: the upstream green dumbbell glyph was replaced by the user's
+       own artwork (design/icons/icon-1024.png). Kept only so glyph() can still parse it.
+       Launcher PNGs are written by tools/apply_user_icon.py + scripts/app-icons.mjs;
+       running `npx @capacitor/assets generate` would overwrite them - do not run it. -->
+  <rect width="512" height="512" fill="#0E2038"/>
+  <g fill="#0E2038"></g>
+</svg>
