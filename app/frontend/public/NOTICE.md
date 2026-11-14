@@ -12,6 +12,18 @@ with the AGPL, provided the corresponding source code remains available under th
 the project repository. This permission applies to the distribution channel only and does
 not otherwise limit the license.
 
+## Corresponding source (AGPL v3.0 §6)
+
+This build of yuan-Gym is a fork of openGym. Its complete corresponding source code is
+published and kept available under the AGPL v3.0 at:
+
+  https://github.com/YUan241813/yuan-Gym
+
+If you received this application (including the pre-built Android package) without the
+source, you may obtain it from the repository above, or by writing to the maintainer.
+The repository root also contains `DIFF-vs-openGym.md` and `MODIFICATIONS.txt` summarising
+the changes made against the upstream openGym project, as required by AGPL v3.0 §5.
+
 ## Body diagram geometry
 
 The muscle outlines the body maps are drawn from (`frontend/src/lib/body-paths.js`) are derived
